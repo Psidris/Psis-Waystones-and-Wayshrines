@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:wsaws/craft_crystal_shell",
+  "criteria": {
+    "acquire_nether_star": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:nether_star"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.wsaws.acquire_nether_star.desc"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.wsaws.acquire_nether_star.title"
+    }
+  },
+  "requirements": [
+    [
+      "acquire_nether_star"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

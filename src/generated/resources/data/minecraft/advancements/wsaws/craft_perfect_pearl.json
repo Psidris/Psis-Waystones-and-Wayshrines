@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:wsaws/acquire_nether_star",
+  "criteria": {
+    "acquire_nether_star": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "wsaws:everlasting_ender_pearl"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.wsaws.acquire_nether_star.desc"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "wsaws:everlasting_ender_pearl"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.wsaws.acquire_nether_star.title"
+    }
+  },
+  "requirements": [
+    [
+      "acquire_nether_star"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

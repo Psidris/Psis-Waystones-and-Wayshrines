@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:wsaws/root",
+  "criteria": {
+    "ender_pearl_thrown": {
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:ender_pearl"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.wsaws.pearl_thrown.desc"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "minecraft:ender_pearl"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.wsaws.pearl_thrown.title"
+    }
+  },
+  "requirements": [
+    [
+      "ender_pearl_thrown"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
