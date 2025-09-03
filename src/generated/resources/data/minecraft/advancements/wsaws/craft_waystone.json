@@ -19,8 +19,8 @@
     "description": {
       "translate": "advancements.wsaws.craft_waystone.desc"
     },
-    "frame": "task",
-    "hidden": true,
+    "frame": "goal",
+    "hidden": false,
     "icon": {
       "item": "wsaws:waystone_block_deepslate"
     },

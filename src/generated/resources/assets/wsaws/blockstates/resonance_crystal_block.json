@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "wsaws:block/resonance_crystal_block"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:wsaws/acquire_nether_star",
   "criteria": {
-    "acquire_nether_star": {
+    "craft_perfect_pearl": {
       "conditions": {
         "items": [
           {
@@ -17,21 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancements.wsaws.acquire_nether_star.desc"
+      "translate": "advancements.wsaws.craft_perfect_pearl.desc"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "wsaws:everlasting_ender_pearl"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancements.wsaws.acquire_nether_star.title"
+      "translate": "advancements.wsaws.craft_perfect_pearl.title"
     }
   },
   "requirements": [
     [
-      "acquire_nether_star"
+      "craft_perfect_pearl"
     ]
   ],
   "sends_telemetry_event": true

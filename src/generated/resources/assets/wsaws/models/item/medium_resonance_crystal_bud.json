@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "wsaws:block/medium_resonance_crystal_bud"
+  }
+}

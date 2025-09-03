@@ -20,9 +20,9 @@
       "translate": "advancements.wsaws.craft_waystone_core.desc"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
-      "item": "wsaws:everlasting_ender_pearl"
+      "item": "wsaws:waystone_core"
     },
     "show_toast": true,
     "title": {

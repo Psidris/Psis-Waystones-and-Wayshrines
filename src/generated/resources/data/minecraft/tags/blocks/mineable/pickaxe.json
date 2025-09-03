@@ -1,0 +1,10 @@
+{
+  "values": [
+    "wsaws:waystone_block_deepslate",
+    "wsaws:resonance_crystal_block",
+    "wsaws:resonance_crystal_cluster",
+    "wsaws:large_resonance_crystal_bud",
+    "wsaws:medium_resonance_crystal_bud",
+    "wsaws:small_resonance_crystal_bud"
+  ]
+}

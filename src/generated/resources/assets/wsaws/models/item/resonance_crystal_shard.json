@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "wsaws:item/waystone_block"
+    "layer0": "wsaws:item/resonance_crystal_shard"
   }
 }
