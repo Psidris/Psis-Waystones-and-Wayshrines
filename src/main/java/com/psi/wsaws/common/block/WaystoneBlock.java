@@ -29,6 +29,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -115,9 +116,20 @@ public class WaystoneBlock extends BaseEntityBlock {
 					level.levelEvent(player, 2001, newblockpos, Block.getId(newblockstate));
 				}
 			}
+			
 		}
 		
 		super.playerWillDestroy(level, blockpos, blockstate, player);
 	}
+
+	@Override
+	public void neighborChanged(BlockState state, Level level, BlockPos thispos, Block block, BlockPos otherpos, boolean bool) {
+	      boolean flag = level.hasNeighborSignal(thispos) || level.hasNeighborSignal(thispos.relative(state.getValue(HALF) == DoubleBlockHalf.LOWER ? Direction.UP : Direction.DOWN));
+	      if (!this.defaultBlockState().is(block) && flag != state.getValue(POWERED)) {
+
+	         level.setBlock(thispos, state.setValue(POWERED, Boolean.valueOf(flag)), 2);
+	      }
+
+	   }
 
 }

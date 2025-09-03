@@ -18,8 +18,12 @@ public class ItemInit {
 			() -> new EverlastingEnderPearlItem(new Item.Properties().fireResistant().stacksTo(1)));
 	public static final RegistryObject<Item> CRYSTAL_SHELL = register("crystal_shell",
 			() -> new CrystalShell(new Item.Properties()));
+	
 	public static final RegistryObject<Item> WAYSTONE_CORE = register("waystone_core",
 			() -> new WaystoneCore(new Item.Properties()));
+	
+	public static final RegistryObject<Item> RESONANCE_SHARD = register("resonance_crystal_shard",
+			() -> new ResonanceShard(new Item.Properties()));
 
 	static void register() {
 	}
