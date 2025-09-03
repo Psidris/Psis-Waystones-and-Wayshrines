@@ -31,6 +31,8 @@ public class DataGenerators {
 		
 		//generate recipes
 		gen.addProvider(true, new ModRecipeProvider(gen.getPackOutput()));
+		//generate block tags
+		gen.addProvider(true, new ModBlockTagProvider(gen.getPackOutput(), event.getLookupProvider(), existingFileHelper));
 		//generate loot tables
 		gen.addProvider(true, new ModLootTableProvider(gen.getPackOutput()));
 		
