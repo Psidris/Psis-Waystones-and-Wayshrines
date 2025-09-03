@@ -9,12 +9,7 @@ import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.FrameType;
 import net.minecraft.advancements.critereon.ChangeDimensionTrigger;
 import net.minecraft.advancements.critereon.ConsumeItemTrigger;
-import net.minecraft.advancements.critereon.DistanceTrigger;
-import net.minecraft.advancements.critereon.EffectsChangedTrigger;
-import net.minecraft.advancements.critereon.EntityHurtPlayerTrigger;
-import net.minecraft.advancements.critereon.ImpossibleTrigger;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.PlayerTrigger;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.advancements.AdvancementSubProvider;
 import net.minecraft.network.chat.Component;
@@ -76,7 +71,7 @@ public class ModAdvancementsSubProvider implements AdvancementSubProvider {
 				.display(Items.ENDER_PEARL.asItem(), Component.translatable("advancements.wsaws.pearl_thrown.title"),
 						Component.translatable("advancements.wsaws.pearl_thrown.desc"), (ResourceLocation) null,
 						FrameType.TASK, true, true, true)
-				.addCriterion("ender_pearl_thrown", ConsumeItemTrigger.TriggerInstance.usedItem(Items.ENDER_PEARL))
+				.addCriterion("ender_pearl_thrown", InventoryChangeTrigger.TriggerInstance.hasItems(Items.ENDER_PEARL))
 				.save(advancements, "wsaws/ender_pearl_thrown");
 		Advancement craft_crystal_shell = Advancement.Builder.advancement()
 				.parent(how_curious_ender_pearl)
@@ -96,7 +91,7 @@ public class ModAdvancementsSubProvider implements AdvancementSubProvider {
 				.parent(acquire_nether_star)
 				.display(ItemInit.EVERLASTING_ENDER_PEARL.get().asItem(), Component.translatable("advancements.wsaws.craft_perfect_pearl.title"),
 						Component.translatable("advancements.wsaws.craft_perfect_pearl.desc"), (ResourceLocation) null,
-						FrameType.TASK, true, true, true)
+						FrameType.TASK, true, true, false)
 				.addCriterion("craft_perfect_pearl", InventoryChangeTrigger.TriggerInstance.hasItems(ItemInit.EVERLASTING_ENDER_PEARL.get()))
 				.save(advancements, "wsaws/craft_perfect_pearl");
 
@@ -105,16 +100,16 @@ public class ModAdvancementsSubProvider implements AdvancementSubProvider {
 				.parent(how_curious_crying_obi)
 				.parent(how_curious_echo_shard)
 				.parent(craft_perfect_pearl)
-				.display(ItemInit.EVERLASTING_ENDER_PEARL.get().asItem(), Component.translatable("advancements.wsaws.craft_waystone_core.title"),
+				.display(ItemInit.WAYSTONE_CORE.get().asItem(), Component.translatable("advancements.wsaws.craft_waystone_core.title"),
 						Component.translatable("advancements.wsaws.craft_waystone_core.desc"), (ResourceLocation) null,
-						FrameType.TASK, true, true, true)
+						FrameType.TASK, true, true, false)
 				.addCriterion("craft_waystone_core", InventoryChangeTrigger.TriggerInstance.hasItems(ItemInit.WAYSTONE_CORE.get()))
 				.save(advancements, "wsaws/craft_waystone_core");
 		Advancement craft_waystone = Advancement.Builder.advancement()
 				.parent(craft_waystone_core)
 				.display(BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get().asItem(), Component.translatable("advancements.wsaws.craft_waystone.title"),
 						Component.translatable("advancements.wsaws.craft_waystone.desc"), (ResourceLocation) null,
-						FrameType.TASK, true, true, true)
+						FrameType.GOAL, true, true, false)
 				.addCriterion("craft_waystone", InventoryChangeTrigger.TriggerInstance.hasItems(BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get()))
 				.save(advancements, "wsaws/craft_waystone");
 	}

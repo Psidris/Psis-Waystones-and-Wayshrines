@@ -3,14 +3,23 @@
 	
 	"item.wsaws.everlasting_ender_pearl": "Everlasting Ender Pearl",
 	"item.wsaws.crystal_shell": "Crystal Shell",
+	"item.wsaws.waystone_core": "Waystone Core",
+	"item.wsaws.resonance_crystal_shard": "Resonance Crystal Shard",
 	
 	"block.wsaws.waystone_block_deepslate": "Deepslate Waystone Block",
+	
+	"block.wsaws.resonance_crystal_block": "Resonance Crystal Block",
+	"block.wsaws.budding_resonance_crystal": "Budding Resonance Crystal",
+	"block.wsaws.resonance_crystal_cluster": "Resonance Crystal Cluster",
+	"block.wsaws.large_resonance_crystal_bud": "Large Resonance Crystal Bud",
+	"block.wsaws.medium_resonance_crystal_bud": "Medium Resonance Crystal Bud",
+	"block.wsaws.small_resonance_crystal_bud": "Small Resonance Crystal Bud",
 	
 	"advancements.wsaws.root.title": "How Curious...",
 	"advancements.wsaws.root.desc": "What else can we find?",
 	
 	"advancements.wsaws.chorus_eaten.title" : "What Just Happened?",
-	"advancements.wsaws.chorus_eaten.desc": "Consume a chorus fruit and find yourself someplace else",
+	"advancements.wsaws.chorus_eaten.desc": "Consume a chorus fruit and find yourself someplace else.",
 	
 	"advancements.wsaws.find_amethyst_geode.title": "Singing Stones",
 	"advancements.wsaws.find_amethyst_geode.desc": "Uncover an amethyst geode. Maybe you should grab some clusters...",
@@ -19,26 +28,26 @@
 	"advancements.wsaws.find_quartz.desc": "Uncover Nether Quartz",
 	
 	"advancements.wsaws.crying_obi.title": "So that's what that is",
-	"advancements.wsaws.crying_obi.desc": "Learn what the obsidian was crying about",
+	"advancements.wsaws.crying_obi.desc": "Learn what the obsidian was crying about.",
 	
 	"advancements.wsaws.echo_shard.title": "...Singing Stones?",
-	"advancements.wsaws.echo_shard.desc": "Obtain and Echo Shard",
+	"advancements.wsaws.echo_shard.desc": "Obtain an Echo Shard.",
 	
 	"advancements.wsaws.pearl_thrown.title": "Fragile Little Thing",
-	"advancements.wsaws.pearl_thrown.desc": "Use and Ender Pearl. How could you keep it from breaking?",
+	"advancements.wsaws.pearl_thrown.desc": "Find an Ender Pearl. How could you keep it from breaking?",
 	
 	"advancements.wsaws.craft_crystal_shell.title": "Rift in a Shell",
-	"advancements.wsaws.craft_crystal_shell.desc": "You've made a suitable casing, but it won't work on it's own. You need to give it a source of energy",
+	"advancements.wsaws.craft_crystal_shell.desc": "You've made a suitable casing, but it won't work on it's own. You need to give it a source of energy.",
 	
 	"advancements.wsaws.acquire_nether_star.title": "The Beginning...",
-	"advancements.wsaws.acquire_nether_star.desc": "You've found a power source, but crafting simply won't do. Use a smithing table to enhance an Eye of Ender",
+	"advancements.wsaws.acquire_nether_star.desc": "You've found a power source, but crafting simply won't do. Use a smithing table to enhance an Eye of Ender.",
 	
 	"advancements.wsaws.craft_perfect_pearl.title": "Moon Dust",
-	"advancements.wsaws.craft_perfect_pearl.desc": "Craft a perfected pearl",
+	"advancements.wsaws.craft_perfect_pearl.desc": "Craft a perfected pearl.",
 	
 	"advancements.wsaws.craft_waystone_core.title": "Wavefunction Collapse",
-	"advancements.wsaws.craft_waystone_core.desc": "Put together everything you've learned thus far",
+	"advancements.wsaws.craft_waystone_core.desc": "Put together everything you've learned thus far.",
 	
 	"advancements.wsaws.craft_waystone.title": "Oh Yeah, it's all coming together",
-	"advancements.wsaws.craft_waystone.desc": "Craft a Waystone"
+	"advancements.wsaws.craft_waystone.desc": "Craft a Waystone."
 }
