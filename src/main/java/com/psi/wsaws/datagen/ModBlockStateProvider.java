@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 
 import com.psi.wsaws.WSaWS;
 import com.psi.wsaws.common.block.BlockInit;
+import com.psi.wsaws.common.block.ResonanceCrystalClusterBlock;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -65,8 +66,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
     }
 	
-	private void buildResonanceCrystals(List<RegistryObject<Block>> blocks) {
-		for(RegistryObject<Block> block : blocks){
+	private void buildResonanceCrystals(List<RegistryObject<ResonanceCrystalClusterBlock>> list) {
+		for(RegistryObject<ResonanceCrystalClusterBlock> block : list){
 	        directionalBlock(block.get(), models().cross(getName(block), new ResourceLocation(WSaWS.MODID, "block/" + getName(block))).renderType("cutout"));
 		}
 	}

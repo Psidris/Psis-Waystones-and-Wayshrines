@@ -14,15 +14,15 @@ public class ItemInit {
 
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, WSaWS.MODID);
 
-	public static final RegistryObject<Item> EVERLASTING_ENDER_PEARL = register("everlasting_ender_pearl",
+	public static final RegistryObject<EverlastingEnderPearlItem> EVERLASTING_ENDER_PEARL = register("everlasting_ender_pearl",
 			() -> new EverlastingEnderPearlItem(new Item.Properties().fireResistant().stacksTo(1)));
-	public static final RegistryObject<Item> CRYSTAL_SHELL = register("crystal_shell",
+	public static final RegistryObject<CrystalShell> CRYSTAL_SHELL = register("crystal_shell",
 			() -> new CrystalShell(new Item.Properties()));
 	
-	public static final RegistryObject<Item> WAYSTONE_CORE = register("waystone_core",
+	public static final RegistryObject<WaystoneCore> WAYSTONE_CORE = register("waystone_core",
 			() -> new WaystoneCore(new Item.Properties()));
 	
-	public static final RegistryObject<Item> RESONANCE_SHARD = register("resonance_crystal_shard",
+	public static final RegistryObject<ResonanceShard> RESONANCE_SHARD = register("resonance_crystal_shard",
 			() -> new ResonanceShard(new Item.Properties()));
 
 	static void register() {
