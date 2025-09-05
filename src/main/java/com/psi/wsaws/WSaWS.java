@@ -3,7 +3,7 @@ package com.psi.wsaws;
 import com.psi.wsaws.client.render.ModEntityRendererManager;
 import com.psi.wsaws.common.CreativeTabInit;
 import com.psi.wsaws.common.block.BlockInit;
-import com.psi.wsaws.common.blockentity.BlockEntityInit;
+import com.psi.wsaws.common.block.blockentity.BlockEntityInit;
 import com.psi.wsaws.common.entity.EntityTypeInit;
 import com.psi.wsaws.common.item.ItemInit;
 

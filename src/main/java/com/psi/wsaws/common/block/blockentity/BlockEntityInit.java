@@ -1,4 +1,4 @@
-package com.psi.wsaws.common.blockentity;
+package com.psi.wsaws.common.block.blockentity;
 
 import com.psi.wsaws.WSaWS;
 import com.psi.wsaws.common.block.BlockInit;
