@@ -1,5 +1,8 @@
 package com.psi.wsaws;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.psi.wsaws.client.render.ModEntityRendererManager;
 import com.psi.wsaws.common.CreativeTabInit;
 import com.psi.wsaws.common.block.BlockInit;
@@ -27,6 +30,7 @@ public class WSaWS
     // Define mod id in a common place for everything to reference
     public static final String MODID = "wsaws";
     
+    public static Logger LOGGER = LogManager.getLogger(MODID);
 
     public WSaWS()
     {
