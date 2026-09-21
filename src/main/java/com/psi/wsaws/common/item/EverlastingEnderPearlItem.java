@@ -38,7 +38,7 @@ public class EverlastingEnderPearlItem extends Item {
 			if (!level.isClientSide) {
 				EverlastingEnderPearlEntity enderpearlentity = new EverlastingEnderPearlEntity(level, player);
 				enderpearlentity.setItem(itemstack);
-				float charge = getPowerForTime((getUseDuration(itemstack)-windup))+1;
+				float charge = getPowerForTime((getUseDuration(itemstack, entity)-windup))+1;
 				enderpearlentity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, charge, 1.0F);
 				level.addFreshEntity(enderpearlentity);
 			}
@@ -68,10 +68,10 @@ public class EverlastingEnderPearlItem extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
+	public int getUseDuration(ItemStack stack, LivingEntity entity) {
 		return 72000;
 	}
-
+	
 	@Override
 	public boolean isFoil(ItemStack itemstack) {
 		return true;
