@@ -7,10 +7,10 @@ import com.psi.wsaws.common.block.BlockInit;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
@@ -29,6 +29,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 		itemBuilder(ItemGenerated, "waystone_core");
 		itemBuilder(ItemGenerated, "waystone_block_deepslate");
 		itemBuilder(ItemGenerated, "resonance_crystal_shard");
+		itemBuilder(ItemGenerated, "rift_claw");
 		
 		blockModel(BlockInit.RESONANCE_CRYSTAL_BLOCK);	
 		blockModel(BlockInit.BUDDING_RESONANCE_CRYSTAL);
