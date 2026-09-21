@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:wsaws/craft_waystone_core",
+  "criteria": {
+    "craft_waystone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wsaws:waystone_block_deepslate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wsaws.craft_waystone.desc"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "wsaws:waystone_block_deepslate"
+    },
+    "title": {
+      "translate": "advancements.wsaws.craft_waystone.title"
+    }
+  },
+  "requirements": [
+    [
+      "craft_waystone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

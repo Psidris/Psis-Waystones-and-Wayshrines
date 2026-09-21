@@ -1,0 +1,46 @@
+{
+  "criteria": {
+    "wsaws/root": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:ender_pearl"
+          },
+          {
+            "items": "minecraft:amethyst_shard"
+          },
+          {
+            "items": "minecraft:crying_obsidian"
+          },
+          {
+            "items": "minecraft:echo_shard"
+          },
+          {
+            "items": "minecraft:chorus_fruit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "wsaws:textures/gui/advancements/backgrounds/wsaws.png",
+    "description": {
+      "translate": "advancements.wsaws.root.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:spyglass"
+    },
+    "title": {
+      "translate": "advancements.wsaws.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "wsaws/root"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

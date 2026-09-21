@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:wsaws/root",
+  "criteria": {
+    "chorus_eaten": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:chorus_fruit"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wsaws.chorus_eaten.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:chorus_fruit"
+    },
+    "title": {
+      "translate": "advancements.wsaws.chorus_eaten.title"
+    }
+  },
+  "requirements": [
+    [
+      "chorus_eaten"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

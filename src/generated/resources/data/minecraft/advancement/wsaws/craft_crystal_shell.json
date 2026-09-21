@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:wsaws/ender_pearl_thrown",
+  "criteria": {
+    "craft_crystal_shell": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wsaws:crystal_shell"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wsaws.craft_crystal_shell.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "wsaws:crystal_shell"
+    },
+    "title": {
+      "translate": "advancements.wsaws.craft_crystal_shell.title"
+    }
+  },
+  "requirements": [
+    [
+      "craft_crystal_shell"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:wsaws/root",
+  "criteria": {
+    "ender_pearl_thrown": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:ender_pearl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wsaws.pearl_thrown.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:ender_pearl"
+    },
+    "title": {
+      "translate": "advancements.wsaws.pearl_thrown.title"
+    }
+  },
+  "requirements": [
+    [
+      "ender_pearl_thrown"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

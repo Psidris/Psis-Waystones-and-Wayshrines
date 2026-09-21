@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:wsaws/root",
+  "criteria": {
+    "crying_obi": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:crying_obsidian"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "traveled_dimensions": {
+      "conditions": {
+        "to": "minecraft:the_nether"
+      },
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wsaws.crying_obi.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:crying_obsidian"
+    },
+    "title": {
+      "translate": "advancements.wsaws.crying_obi.title"
+    }
+  },
+  "requirements": [
+    [
+      "traveled_dimensions"
+    ],
+    [
+      "crying_obi"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

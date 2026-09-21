@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:wsaws/root",
+  "criteria": {
+    "find_quartz": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:quartz"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wsaws.find_quartz.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:quartz"
+    },
+    "title": {
+      "translate": "advancements.wsaws.find_quartz.title"
+    }
+  },
+  "requirements": [
+    [
+      "find_quartz"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

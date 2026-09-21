@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:wsaws/root",
+  "criteria": {
+    "find_amethyst_geode": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:amethyst_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wsaws.find_amethyst_geode.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:amethyst_cluster"
+    },
+    "title": {
+      "translate": "advancements.wsaws.find_amethyst_geode.title"
+    }
+  },
+  "requirements": [
+    [
+      "find_amethyst_geode"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

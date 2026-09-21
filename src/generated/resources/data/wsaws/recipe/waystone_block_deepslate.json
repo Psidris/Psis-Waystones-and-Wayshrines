@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "wsaws:waystone_core"
+    },
+    "D": {
+      "item": "minecraft:polished_deepslate"
+    }
+  },
+  "pattern": [
+    "DDD",
+    " C ",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "wsaws:waystone_block_deepslate"
+  }
+}
