@@ -6,7 +6,6 @@ public class ResonanceShard extends Item {
 
 	public ResonanceShard(Properties p_41383_) {
 		super(p_41383_);
-		// TODO Auto-generated constructor stub
 	}
 
 }

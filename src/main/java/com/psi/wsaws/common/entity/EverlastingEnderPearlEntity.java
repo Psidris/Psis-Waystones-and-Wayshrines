@@ -19,6 +19,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.event.entity.EntityTeleportEvent;
 
 public class EverlastingEnderPearlEntity extends ThrowableItemProjectile {
 	
@@ -74,7 +75,7 @@ public class EverlastingEnderPearlEntity extends ThrowableItemProjectile {
 				ServerPlayer serverplayer = (ServerPlayer) entity;
 				if (serverplayer.connection.isAcceptingMessages() && serverplayer.level() == this.level()
 						&& !serverplayer.isSleeping()) {
-					net.minecraftforge.event.entity.EntityTeleportEvent.EnderPearl event = net.minecraftforge.event.ForgeEventFactory.onEnderPearlLand(serverplayer, this.getX(), this.getY(), this.getZ(), null, 0.0f, hit);
+					net.neoforged.neoforge.event.entity.EntityTeleportEvent.EnderPearl event = net.neoforged.neoforge.event.EventHooks.onEnderPearlLand(serverplayer, this.getX(), this.getY(), this.getZ(), null, 0.0f, hit);
 					if (!event.isCanceled()) {
 						if (this.random.nextFloat() < 0.05F
 								&& this.level().getGameRules().getBoolean(GameRules.RULE_DOMOBSPAWNING)) {

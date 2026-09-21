@@ -1,22 +1,24 @@
 package com.psi.wsaws.common.block.blockentity;
 
+import java.util.Set;
+import java.util.function.Supplier;
+
 import com.psi.wsaws.WSaWS;
 import com.psi.wsaws.common.block.BlockInit;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class BlockEntityInit {
 	
-	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, WSaWS.MODID);
+	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, WSaWS.MODID);
 	
-	public static final RegistryObject<BlockEntityType<WaystoneBlockEntity>> WAYSTONE_BLOCK_ENTITY = register("waystone_block_entity", WaystoneBlockEntity::new, BlockInit.WAYSTONE_BLOCK_DEEPSLATE);
-	
-	private static <T extends BlockEntity> RegistryObject<BlockEntityType<T>> register(String name, BlockEntityType.BlockEntitySupplier<T> supplier, RegistryObject<? extends Block> block){
-		return BLOCK_ENTITY_TYPES.register(name, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
-	}
+	public static final Supplier<BlockEntityType<WaystoneBlockEntity>> WAYSTONE_BLOCK_ENTITY = BLOCK_ENTITY_TYPES.register(
+			"waystone_block_entity",
+			() -> BlockEntityType.Builder.of(
+					WaystoneBlockEntity::new,
+					BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get()
+	        ).build(null)
+	);
 }
