@@ -2,62 +2,69 @@ package com.psi.wsaws.datagen;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.BiConsumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import com.psi.wsaws.WSaWS;
 import com.psi.wsaws.common.block.BlockInit;
 import com.psi.wsaws.common.item.ItemInit;
 
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.LootTable.Builder;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
-import net.minecraft.world.level.storage.loot.functions.CopyNbtFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
-import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraftforge.registries.RegistryObject;
 
 public class ModLootTableProvider extends LootTableProvider {
 
-	public ModLootTableProvider(PackOutput pack) {
-		super(pack, Set.of(), List.of(
-				new LootTableProvider.SubProviderEntry(ModBlockLoot::new, LootContextParamSets.BLOCK)));
+	public ModLootTableProvider(PackOutput pack, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+		super(pack, Set.of(), List.of(new LootTableProvider.SubProviderEntry(ModBlockLoot::new, LootContextParamSets.BLOCK)), lookupProvider);
 		// TODO Auto-generated constructor stub
 	}
 
 }
 
 class ModBlockLoot extends BlockLootSubProvider {
-	   private static final Set<Item> EXPLOSION_RESISTANT = Stream.of(BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get()).map(ItemLike::asItem).collect(Collectors.toSet());
+	private static final Set<Item> EXPLOSION_RESISTANT = Stream.of(BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get()).map(ItemLike::asItem).collect(Collectors.toSet());
 	
-	protected ModBlockLoot() {
-		super(EXPLOSION_RESISTANT, FeatureFlags.REGISTRY.allFlags());
+	protected ModBlockLoot(HolderLookup.Provider lookupProvider) {
+		super(EXPLOSION_RESISTANT, FeatureFlags.REGISTRY.allFlags(), lookupProvider);
 	}
 
 	@Override
 	protected Iterable<Block> getKnownBlocks() {
-		// TODO Auto-generated method stub
-		return BlockInit.BLOCKS.getEntries().stream().flatMap(RegistryObject::stream)::iterator;
+		return BlockInit.BLOCKS.getEntries().stream().map(e -> (Block) e.value()).toList();
 	}
 
 	@Override
-	protected void generate() {
-		//waystones
+	public void generate() {
+		HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        
+        //waystones
 		this.add(BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get(), block -> {
-			return this.createDoorTable(block).apply(CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY).copy("linked_pos", "linked_pos"));
+			return this.createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER);
 		});
 		
 		//resonance crystals
@@ -66,7 +73,7 @@ class ModBlockLoot extends BlockLootSubProvider {
 			return createSilkTouchDispatchTable(block,
 					LootItem.lootTableItem(ItemInit.RESONANCE_SHARD.get())
 					.apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))
-					.apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+					.apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
 					.when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
 					.otherwise(this.applyExplosionDecay(block, LootItem.lootTableItem(ItemInit.RESONANCE_SHARD.get()).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))));
 		});

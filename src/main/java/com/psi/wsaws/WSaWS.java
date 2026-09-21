@@ -4,24 +4,22 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.psi.wsaws.client.render.ModEntityRendererManager;
-import com.psi.wsaws.common.CreativeTabInit;
 import com.psi.wsaws.common.block.BlockInit;
 import com.psi.wsaws.common.block.blockentity.BlockEntityInit;
 import com.psi.wsaws.common.entity.EntityTypeInit;
 import com.psi.wsaws.common.item.ItemInit;
+import com.psi.wsaws.common.util.CreativeTabInit;
+import com.psi.wsaws.common.util.DataComponentTypeInit;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(WSaWS.MODID)
@@ -32,25 +30,22 @@ public class WSaWS
     
     public static Logger LOGGER = LogManager.getLogger(MODID);
 
-    public WSaWS()
+    public WSaWS(IEventBus modBus)
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::doClientStuff);
+        modBus.addListener(this::commonSetup);
+        modBus.addListener(this::doClientStuff);
         
-        CreativeTabInit.CREATIVE_MODE_TABS.register(modEventBus);
-		BlockInit.BLOCKS.register(modEventBus);
-		ItemInit.ITEMS.register(modEventBus);
-		BlockEntityInit.BLOCK_ENTITY_TYPES.register(modEventBus);
-		EntityTypeInit.ENTITIES.register(modEventBus);
+        CreativeTabInit.CREATIVE_MODE_TABS.register(modBus);
+		BlockInit.BLOCKS.register(modBus);
+		ItemInit.ITEMS.register(modBus);
+		BlockEntityInit.BLOCK_ENTITY_TYPES.register(modBus);
+		EntityTypeInit.ENTITIES.register(modBus);
+		DataComponentTypeInit.DATA_COMPONENTS.register(modBus);
 
         // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
-
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
+        NeoForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
