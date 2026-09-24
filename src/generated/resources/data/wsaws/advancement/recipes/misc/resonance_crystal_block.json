@@ -5,10 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:chorus_fruit"
-          },
-          {
-            "items": "minecraft:echo_shard"
+            "items": "wsaws:resonance_crystal_shard"
           }
         ]
       },
@@ -16,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "wsaws:waystone_core"
+        "recipe": "wsaws:resonance_crystal_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "wsaws:waystone_core"
+      "wsaws:resonance_crystal_block"
     ]
   }
 }

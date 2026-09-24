@@ -2,17 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "minecraft:amethyst_cluster"
+    "E": {
+      "item": "minecraft:echo_shard"
     },
-    "Q": {
-      "item": "minecraft:quartz"
+    "R": {
+      "item": "wsaws:resonance_crystal_cluster"
     }
   },
   "pattern": [
-    "AQA",
-    "Q Q",
-    "AQA"
+    "RER",
+    "E E",
+    "RER"
   ],
   "result": {
     "count": 1,

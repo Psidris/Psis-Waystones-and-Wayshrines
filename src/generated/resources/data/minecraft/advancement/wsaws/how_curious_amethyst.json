@@ -1,11 +1,11 @@
 {
-  "parent": "minecraft:wsaws/craft_perfect_pearl",
+  "parent": "minecraft:wsaws/root",
   "criteria": {
-    "craft_waystone_core": {
+    "how_curious_amethyst": {
       "conditions": {
         "items": [
           {
-            "items": "wsaws:waystone_core"
+            "items": "minecraft:amethyst_shard"
           }
         ]
       },
@@ -14,20 +14,20 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.wsaws.craft_waystone_core.desc"
+      "translate": "advancements.wsaws.how_curious_amethyst.desc"
     },
     "hidden": true,
     "icon": {
       "count": 1,
-      "id": "wsaws:waystone_core"
+      "id": "minecraft:amethyst_shard"
     },
     "title": {
-      "translate": "advancements.wsaws.craft_waystone_core.title"
+      "translate": "advancements.wsaws.how_curious_amethyst.title"
     }
   },
   "requirements": [
     [
-      "craft_waystone_core"
+      "how_curious_amethyst"
     ]
   ],
   "sends_telemetry_event": true

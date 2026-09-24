@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "wsaws:block/rift_core_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "wsaws:block/rift_core_block"
+    },
+    "facing=south": {
+      "model": "wsaws:block/rift_core_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "wsaws:block/rift_core_block",
+      "y": 270
+    }
+  }
+}

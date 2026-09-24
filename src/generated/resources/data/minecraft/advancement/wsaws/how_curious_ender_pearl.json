@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:wsaws/root",
+  "criteria": {
+    "how_curious_ender_pearl": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:ender_pearl"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wsaws.how_curious_ender_pearl.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:ender_pearl"
+    },
+    "title": {
+      "translate": "advancements.wsaws.how_curious_ender_pearl.title"
+    }
+  },
+  "requirements": [
+    [
+      "how_curious_ender_pearl"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

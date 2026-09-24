@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:wsaws/echo_shard",
+  "parent": "minecraft:wsaws/how_curious_echo_shard",
   "criteria": {
     "harmony": {
       "conditions": {

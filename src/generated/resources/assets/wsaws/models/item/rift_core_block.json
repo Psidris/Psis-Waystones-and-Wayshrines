@@ -1,0 +1,6 @@
+{
+  "parent": "wsaws:block/rift_core_block",
+  "textures": {
+    "layer0": "wsaws:block/rift_core_block"
+  }
+}

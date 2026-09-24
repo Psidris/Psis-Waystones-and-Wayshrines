@@ -1,11 +1,11 @@
 {
-  "parent": "minecraft:wsaws/craft_waystone_core",
+  "parent": "minecraft:wsaws/craft_rift_core",
   "criteria": {
     "craft_waystone": {
       "conditions": {
         "items": [
           {
-            "items": "wsaws:waystone_block_deepslate"
+            "items": "wsaws:waystone_block"
           }
         ]
       },
@@ -20,7 +20,7 @@
     "hidden": true,
     "icon": {
       "count": 1,
-      "id": "wsaws:waystone_block_deepslate"
+      "id": "wsaws:waystone_block"
     },
     "title": {
       "translate": "advancements.wsaws.craft_waystone.title"

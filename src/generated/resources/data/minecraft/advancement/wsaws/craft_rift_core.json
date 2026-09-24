@@ -1,11 +1,11 @@
 {
-  "parent": "minecraft:wsaws/root",
+  "parent": "minecraft:wsaws/craft_perfect_pearl",
   "criteria": {
-    "echo_shard": {
+    "craft_rift_core": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:echo_shard"
+            "items": "wsaws:rift_core_block"
           }
         ]
       },
@@ -14,20 +14,20 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.wsaws.echo_shard.desc"
+      "translate": "advancements.wsaws.craft_rift_core.desc"
     },
     "hidden": true,
     "icon": {
       "count": 1,
-      "id": "minecraft:echo_shard"
+      "id": "wsaws:rift_core_block"
     },
     "title": {
-      "translate": "advancements.wsaws.echo_shard.title"
+      "translate": "advancements.wsaws.craft_rift_core.title"
     }
   },
   "requirements": [
     [
-      "echo_shard"
+      "craft_rift_core"
     ]
   ],
   "sends_telemetry_event": true

@@ -5,23 +5,23 @@
     "C": {
       "item": "minecraft:chorus_fruit"
     },
-    "E": {
-      "item": "minecraft:echo_shard"
-    },
     "O": {
       "item": "minecraft:crying_obsidian"
     },
     "P": {
       "item": "wsaws:everlasting_ender_pearl"
+    },
+    "R": {
+      "item": "wsaws:resonance_crystal_shard"
     }
   },
   "pattern": [
-    "OEO",
-    "CPC",
-    "OEO"
+    "OCO",
+    "RPR",
+    "OCO"
   ],
   "result": {
     "count": 2,
-    "id": "wsaws:waystone_core"
+    "id": "wsaws:rift_core_block"
   }
 }

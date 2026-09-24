@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:wsaws/ender_pearl_thrown",
+  "parent": "minecraft:wsaws/how_curious_echo_shard",
   "criteria": {
     "craft_crystal_shell": {
       "conditions": {

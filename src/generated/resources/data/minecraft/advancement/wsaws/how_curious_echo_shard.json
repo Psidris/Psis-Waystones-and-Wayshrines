@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:wsaws/root",
   "criteria": {
-    "ender_pearl_thrown": {
+    "how_curious_echo_shard": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:ender_pearl"
+            "items": "minecraft:echo_shard"
           }
         ]
       },
@@ -14,20 +14,20 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.wsaws.pearl_thrown.desc"
+      "translate": "advancements.wsaws.how_curious_echo_shard.desc"
     },
     "hidden": true,
     "icon": {
       "count": 1,
-      "id": "minecraft:ender_pearl"
+      "id": "minecraft:echo_shard"
     },
     "title": {
-      "translate": "advancements.wsaws.pearl_thrown.title"
+      "translate": "advancements.wsaws.how_curious_echo_shard.title"
     }
   },
   "requirements": [
     [
-      "ender_pearl_thrown"
+      "how_curious_echo_shard"
     ]
   ],
   "sends_telemetry_event": true

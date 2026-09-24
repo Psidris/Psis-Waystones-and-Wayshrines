@@ -3,19 +3,19 @@
   "category": "misc",
   "key": {
     "C": {
-      "item": "wsaws:waystone_core"
+      "item": "wsaws:rift_core_block"
     },
     "D": {
-      "item": "minecraft:polished_deepslate"
+      "item": "minecraft:cobbled_deepslate"
     }
   },
   "pattern": [
-    "DDD",
-    " C ",
-    "DDD"
+    "D",
+    "C",
+    "D"
   ],
   "result": {
     "count": 1,
-    "id": "wsaws:waystone_block_deepslate"
+    "id": "wsaws:waystone_block"
   }
 }
