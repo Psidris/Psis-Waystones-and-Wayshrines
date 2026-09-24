@@ -1,0 +1,25 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "wsaws:block/rift_core_block",
+		"particle": "wsaws:block/rift_core_block"
+	},
+	"elements": [
+		{
+			"name": "core",
+			"from": [3, 0, 3],
+			"to": [13, 16, 13],
+			"shade": false,
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 0]},
+			"faces": {
+				"north": {"uv": [3, 0, 13, 16], "texture": "#0"},
+				"east": {"uv": [3, 0, 13, 16], "texture": "#0"},
+				"south": {"uv": [3, 0, 13, 16], "texture": "#0"},
+				"west": {"uv": [3, 0, 13, 16], "texture": "#0"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#0"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#0"}
+			}
+		}
+	]
+}
