@@ -20,21 +20,17 @@ import net.minecraft.world.level.block.SculkSpreader;
 @Implements(@Interface(iface = SculkBehaviour.class, prefix = "sculk$"))
 public class BuddingAmethystSculkBehaviourMixin {
 	public int sculk$attemptUseCharge(SculkSpreader.ChargeCursor cursor, LevelAccessor level, BlockPos pos, RandomSource random, SculkSpreader spreader, boolean shouldConvertBlocks) {
-		WSaWS.LOGGER.debug("we're in");
+		//WSaWS.LOGGER.debug("we're in");
 		if(level.getBlockState(cursor.getPos()).is(Blocks.BUDDING_AMETHYST)) {
-			WSaWS.LOGGER.debug("yeah im looking at amethyst");
-			if(true) {
-				WSaWS.LOGGER.debug("ready to try");
-				if (level.setBlock(cursor.getPos(), BlockInit.BUDDING_RESONANCE_CRYSTAL.get().defaultBlockState(), 3)) {
-					WSaWS.LOGGER.debug("crystal replaced"); 
-					return cursor.getCharge()-1;
-				} else {
-					WSaWS.LOGGER.debug("crystal not replaced");
-				}
+			if (level.setBlock(cursor.getPos(), BlockInit.BUDDING_RESONANCE_CRYSTAL.get().getStateDefinition().any(), 3)) {
+				//WSaWS.LOGGER.debug("crystal replaced"); 
+				return cursor.getCharge()-1;
+			} else {
+				//WSaWS.LOGGER.debug("crystal not replaced");
 			}
 			
 		}
-		WSaWS.LOGGER.debug("didnt work");
+		//WSaWS.LOGGER.debug("didnt work");
 		return cursor.getCharge();
 		
 	}

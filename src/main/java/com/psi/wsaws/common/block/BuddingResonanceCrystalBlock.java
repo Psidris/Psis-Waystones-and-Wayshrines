@@ -1,5 +1,7 @@
 package com.psi.wsaws.common.block;
 
+import com.psi.wsaws.WSaWS;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -26,24 +28,32 @@ public class BuddingResonanceCrystalBlock extends ResonanceCrystalBlock implemen
 
 	@Override
 	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+		//WSaWS.LOGGER.debug("resonance crystal random tick");
 		if (random.nextInt(5) == 0) {
+			//WSaWS.LOGGER.debug("resonance crystal random tick trigger");
 			growClusters(level, pos, random);
 		}
 	}
 
 	@Override
 	public int attemptUseCharge(ChargeCursor cursor, LevelAccessor level, BlockPos pos, RandomSource random, SculkSpreader spreader, boolean shouldConvertBlocks) {
-		 if (cursor.getCharge() != 0) {
-			 if (random.nextInt(spreader.growthSpawnCost()) < cursor.getCharge()) {
-				 growClusters(level, pos, random);
-				 return Math.max(0, cursor.getCharge() - spreader.growthSpawnCost());
-			 }
-		 }
-		return super.attemptUseCharge(cursor, level, pos, random, spreader, shouldConvertBlocks);
+		if(level.getBlockState(cursor.getPos()).is(this)) {
+			if (cursor.getCharge() != 0) {
+				//WSaWS.LOGGER.debug("bud finna grow");
+				if (random.nextInt(spreader.growthSpawnCost()) < cursor.getCharge()) {
+					//WSaWS.LOGGER.debug("bud growing");
+					growClusters(level, cursor.getPos(), random);
+					return Math.max(0, cursor.getCharge() - spreader.growthSpawnCost());
+				}
+			}
+		}
+		
+		
+		return cursor.getCharge();
 	}
 
 	public static boolean canClusterGrowAtState(BlockState state) {
-		return state.isAir() || state.is(Blocks.WATER) && state.getFluidState().getAmount() == 8;
+		return state.isAir() || state.is(Blocks.SCULK_VEIN) || state.is(Blocks.WATER) && state.getFluidState().getAmount() == 8;
 	}
 	
 	private void growClusters(LevelAccessor level, BlockPos pos, RandomSource random) {
@@ -62,9 +72,9 @@ public class BuddingResonanceCrystalBlock extends ResonanceCrystalBlock implemen
 		}
 
 		if (block != null) {
-			BlockState blockstate1 = block.defaultBlockState().setValue(AmethystClusterBlock.FACING, direction)
-					.setValue(AmethystClusterBlock.WATERLOGGED,
-							Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
+			BlockState blockstate1 = block.getStateDefinition().any()
+					.setValue(ResonanceCrystalClusterBlock.FACING, direction)
+					.setValue(ResonanceCrystalClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
 			level.setBlock(blockpos, blockstate1, 3);
 		}
 	}
