@@ -1,5 +1,7 @@
 package com.psi.wsaws.common.block;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Stream;
@@ -8,6 +10,7 @@ import com.mojang.serialization.MapCodec;
 import com.psi.wsaws.WSaWS;
 import com.psi.wsaws.common.block.blockentity.BlockEntityInit;
 import com.psi.wsaws.common.block.blockentity.WaystoneBlockEntity;
+import com.psi.wsaws.common.block.blockentity.WaystoneBlockTopEntity;
 import com.psi.wsaws.common.item.ItemInit;
 import com.psi.wsaws.common.util.ChunkHandler;
 import com.psi.wsaws.common.util.DataComponentTypeInit;
@@ -60,6 +63,7 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
@@ -160,24 +164,26 @@ public class WaystoneBlock extends BaseEntityBlock {
 
 	@Override
 	public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
-		for(int j = 0; j < 4; ++j) {
-            double d0 = (double)pos.getX() + random.nextDouble();
-            double d1 = (double)pos.getY() + random.nextDouble();
-            double d2 = (double)pos.getZ() + random.nextDouble();
-            double d3 = (random.nextDouble() - 0.5D) * 0.5D;
-            double d4 = (random.nextDouble() - 0.5D) * 0.5D;
-            double d5 = (random.nextDouble() - 0.5D) * 0.5D;
-            int k = random.nextInt(2) * 2 - 1;
-            if (random.nextBoolean()) {
-               d2 = (double)pos.getZ() + 0.5D + 0.25D * (double)k;
-               d5 = (double)(random.nextFloat() * 2.0F * (float)k);
-            } else {
-               d0 = (double)pos.getX() + 0.5D + 0.25D * (double)k;
-               d3 = (double)(random.nextFloat() * 2.0F * (float)k);
-            }
-
-            level.addParticle(ParticleTypes.PORTAL, d0, d1, d2, d3, d4, d5);
-         }
+		if(level.getBlockEntity(pos) instanceof WaystoneBlockEntity ent && ent.getLinkedPos() != null) {
+			for(int j = 0; j < 4; ++j) {
+	            double d0 = (double)pos.getX() + random.nextDouble();
+	            double d1 = (double)pos.getY() + random.nextDouble();
+	            double d2 = (double)pos.getZ() + random.nextDouble();
+	            double d3 = (random.nextDouble() - 0.5D) * 0.5D;
+	            double d4 = (random.nextDouble() - 0.5D) * 0.5D;
+	            double d5 = (random.nextDouble() - 0.5D) * 0.5D;
+	            int k = random.nextInt(2) * 2 - 1;
+	            if (random.nextBoolean()) {
+	               d2 = (double)pos.getZ() + 0.5D + 0.25D * (double)k;
+	               d5 = (double)(random.nextFloat() * 2.0F * (float)k);
+	            } else {
+	               d0 = (double)pos.getX() + 0.5D + 0.25D * (double)k;
+	               d3 = (double)(random.nextFloat() * 2.0F * (float)k);
+	            }
+	
+	            level.addParticle(ParticleTypes.PORTAL, d0, d1, d2, d3, d4, d5);
+			}
+		}
 	}
 
 	@Override
@@ -229,27 +235,51 @@ public class WaystoneBlock extends BaseEntityBlock {
 					BlockPos target = BlockPos.of(stack.get(DataComponentTypeInit.WAYSTONE_LINKED_POS).pos());
 					waystone.trySetTarget(target);
 				}
+				if(stack.has(DataComponents.BLOCK_STATE)) {
+					
+				}
 			}
 		}
 	}
 	
 	@Override
 	public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-		if(!level.isClientSide && (player.isCreative() || !player.hasCorrectToolForDrops(state, level, pos))) {
-			DoubleBlockHalf doubleblockhalf = state.getValue(HALF);
-	        if (doubleblockhalf == DoubleBlockHalf.UPPER) {
-	            BlockPos blockpos = pos.below();
-	            BlockState blockstate = level.getBlockState(blockpos);
-	            if (blockstate.is(state.getBlock()) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER) {
-	                BlockState blockstate1 = blockstate.getFluidState().is(Fluids.WATER) ? Blocks.WATER.defaultBlockState() : Blocks.AIR.defaultBlockState();
-	                level.setBlock(blockpos, blockstate1, 35);
-	                level.levelEvent(player, 2001, blockpos, Block.getId(blockstate));
-	            }
-	        }
-		} else {
-			dropResources(state, level, pos, null, player, player.getMainHandItem());
+		/*
+		if(player.isCreative() || !player.hasCorrectToolForDrops(state, level, pos)) {
+			if(!level.isClientSide) {
+				DoubleBlockHalf doubleblockhalf = state.getValue(HALF);
+		        if (doubleblockhalf == DoubleBlockHalf.UPPER) {
+		            BlockPos blockpos = pos.below();
+		            BlockState blockstate = level.getBlockState(blockpos);
+		            if (blockstate.is(state.getBlock()) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER) {
+		                BlockState blockstate1 = blockstate.getFluidState().is(Fluids.WATER) ? Blocks.WATER.defaultBlockState() : Blocks.AIR.defaultBlockState();
+		                level.setBlock(blockpos, blockstate1, 35);
+		                level.levelEvent(player, 2001, blockpos, Block.getId(blockstate));
+		            }
+		        }
+			} else {
+				dropResources(state, level, pos, null, player, player.getMainHandItem());
+			}
 		}
+		*/
 		return super.playerWillDestroy(level, pos, state, player);
+	}
+
+	@Override
+	protected List<ItemStack> getDrops(BlockState state, net.minecraft.world.level.storage.loot.LootParams.Builder params) {
+		
+		List<ItemStack> drops = new ArrayList<>();
+		if(state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.LOWER) {
+			if(params.getOptionalParameter(LootContextParams.BLOCK_ENTITY) instanceof WaystoneBlockEntity waystone) {
+				drops.addAll(Block.getDrops(waystone.getBottomState(), (ServerLevel) params.getLevel(), waystone.getBlockPos(), waystone));
+				drops.addAll(Block.getDrops(waystone.getCoreState(), (ServerLevel) params.getLevel(), waystone.getBlockPos(), waystone));
+			}
+		} else if(state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER) {
+			if(params.getOptionalParameter(LootContextParams.BLOCK_ENTITY) instanceof WaystoneBlockTopEntity waystone) {
+				drops.addAll(Block.getDrops(waystone.getTopState(), (ServerLevel) params.getLevel(), waystone.getBlockPos(), waystone));
+			}
+		}
+		return drops;
 	}
 
 	@Override
@@ -265,7 +295,7 @@ public class WaystoneBlock extends BaseEntityBlock {
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
 		return state.getValue(HALF) == DoubleBlockHalf.UPPER ? 
-				null :
+				BlockEntityInit.WAYSTONE_BLOCK_TOP_ENTITY.get().create(pos, state) :
 				BlockEntityInit.WAYSTONE_BLOCK_ENTITY.get().create(pos, state);
 	}
 
