@@ -1,6 +1,5 @@
 package com.psi.wsaws.common.block.blockentity;
 
-import java.util.Set;
 import java.util.function.Supplier;
 
 import com.psi.wsaws.WSaWS;
@@ -18,7 +17,14 @@ public class BlockEntityInit {
 			"waystone_block_entity",
 			() -> BlockEntityType.Builder.of(
 					WaystoneBlockEntity::new,
-					BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get()
+					BlockInit.WAYSTONE_BLOCK.get()
+	        ).build(null)
+	);
+	public static final Supplier<BlockEntityType<WaystoneBlockTopEntity>> WAYSTONE_BLOCK_TOP_ENTITY = BLOCK_ENTITY_TYPES.register(
+			"waystone_block_top_entity",
+			() -> BlockEntityType.Builder.of(
+					WaystoneBlockTopEntity::new,
+					BlockInit.WAYSTONE_BLOCK.get()
 	        ).build(null)
 	);
 }
