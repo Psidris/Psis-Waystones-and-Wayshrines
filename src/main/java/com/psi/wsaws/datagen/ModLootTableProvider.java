@@ -47,7 +47,7 @@ public class ModLootTableProvider extends LootTableProvider {
 }
 
 class ModBlockLoot extends BlockLootSubProvider {
-	private static final Set<Item> EXPLOSION_RESISTANT = Stream.of(BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get()).map(ItemLike::asItem).collect(Collectors.toSet());
+	private static final Set<Item> EXPLOSION_RESISTANT = Stream.of(BlockInit.WAYSTONE_BLOCK.get()).map(ItemLike::asItem).collect(Collectors.toSet());
 	
 	protected ModBlockLoot(HolderLookup.Provider lookupProvider) {
 		super(EXPLOSION_RESISTANT, FeatureFlags.REGISTRY.allFlags(), lookupProvider);
@@ -62,10 +62,15 @@ class ModBlockLoot extends BlockLootSubProvider {
 	public void generate() {
 		HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
         
-        //waystones
+        /*//waystones
 		this.add(BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get(), block -> {
 			return this.createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER);
 		});
+		*/
+		
+		this.add(BlockInit.WAYSTONE_BLOCK.get(), noDrop());
+		
+		this.dropSelf(BlockInit.RIFT_CORE_BLOCK.get());
 		
 		//resonance crystals
 		this.dropSelf(BlockInit.RESONANCE_CRYSTAL_BLOCK.get());

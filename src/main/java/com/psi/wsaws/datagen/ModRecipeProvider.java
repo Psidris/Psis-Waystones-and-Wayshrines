@@ -37,11 +37,11 @@ public class ModRecipeProvider extends RecipeProvider {
 					.save(recipeOutput);
 				
 				ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemInit.CRYSTAL_SHELL.get())
-					.define('A', Items.AMETHYST_CLUSTER)
-					.define('Q', Items.QUARTZ)
-					.pattern("AQA")
-					.pattern("Q Q")
-					.pattern("AQA")
+					.define('R', BlockInit.RESONANCE_CRYSTAL_CLUSTER.get())
+					.define('E', Items.ECHO_SHARD)
+					.pattern("RER")
+					.pattern("E E")
+					.pattern("RER")
 					.unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(Items.AMETHYST_SHARD, Items.QUARTZ))
 					.save(recipeOutput);
 				
@@ -49,25 +49,32 @@ public class ModRecipeProvider extends RecipeProvider {
 					.unlocks("has_item", has(Items.NETHER_STAR))
 					.save(recipeOutput, "everlasting_ender_pearl_smithing");
 				
-				ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemInit.WAYSTONE_CORE.get(), 2)
+				//blocks
+				ShapedRecipeBuilder.shaped(RecipeCategory.MISC, BlockInit.RESONANCE_CRYSTAL_BLOCK.get(), 2)
+					.define('R', ItemInit.RESONANCE_SHARD.get())
+					.pattern("RR")
+					.pattern("RR")
+					.unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemInit.RESONANCE_SHARD.get()))
+					.save(recipeOutput);
+				
+				ShapedRecipeBuilder.shaped(RecipeCategory.MISC, BlockInit.RIFT_CORE_BLOCK.get(), 2)
 					.define('O', Items.CRYING_OBSIDIAN)
 					.define('P', ItemInit.EVERLASTING_ENDER_PEARL.get())
 					.define('C', Items.CHORUS_FRUIT)
-					.define('E', Items.ECHO_SHARD)
-					.pattern("OEO")
-					.pattern("CPC")
-					.pattern("OEO")
-					.unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(Items.CHORUS_FRUIT, Items.ECHO_SHARD))
+					.define('R', ItemInit.RESONANCE_SHARD.get())
+					.pattern("OCO")
+					.pattern("RPR")
+					.pattern("OCO")
+					.unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(Items.CHORUS_FRUIT, ItemInit.RESONANCE_SHARD.get()))
 					.save(recipeOutput);
 				
-				//blocks
-				ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get())
-					.define('C', ItemInit.WAYSTONE_CORE.get())
-					.define('D', Items.POLISHED_DEEPSLATE)
-					.pattern("DDD")
-					.pattern(" C ")
-					.pattern("DDD")
-					.unlockedBy("has_item", has(ItemInit.WAYSTONE_CORE.get()))
+				ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, BlockInit.WAYSTONE_BLOCK.get())
+					.define('C', BlockInit.RIFT_CORE_BLOCK.get())
+					.define('D', Items.COBBLED_DEEPSLATE)
+					.pattern("D")
+					.pattern("C")
+					.pattern("D")
+					.unlockedBy("has_item", has(BlockInit.RIFT_CORE_BLOCK.get()))
 					.save(recipeOutput);
 	}
 }

@@ -17,6 +17,7 @@ import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.client.model.generators.ModelFile.ExistingModelFile;
+import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.neoforged.neoforge.client.model.generators.VariantBlockStateBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -32,7 +33,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		
 		//horizontalBlock(BlockInit.WAYSTONE_BLOCK.get(), models().getExistingFile(modLoc("block/waystone/waystone_block")));
 		
-		waystoneBlock(BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get(), "waystone_block");
+		waystoneBlock(BlockInit.WAYSTONE_BLOCK.get(), "waystone_block");
+		
+		horizontalBlock(BlockInit.RIFT_CORE_BLOCK.get(), models().getExistingFile(modLoc("block/rift_core_block")));
 		
 		simpleBlock(BlockInit.RESONANCE_CRYSTAL_BLOCK.get());
 		simpleBlock(BlockInit.BUDDING_RESONANCE_CRYSTAL.get());
@@ -44,8 +47,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	}
 	
 	private void waystoneBlock(Block block, String name) {
-		ExistingModelFile lower = models().getExistingFile(modLoc("block/waystone/"+name+"_lower"));
-		ExistingModelFile upper = models().getExistingFile(modLoc("block/waystone/"+name+"_upper"));
+		ExistingModelFile lower = models().getExistingFile(modLoc("block/waystone/waystone_block_lower"));
+		ExistingModelFile upper = models().getExistingFile(modLoc("block/waystone/waystone_block_upper"));
+		
         VariantBlockStateBuilder builder = getVariantBuilder(block);
         builder.forAllStates(state -> {
             boolean islower = state.getValue(DoorBlock.HALF) == DoubleBlockHalf.LOWER;

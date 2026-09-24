@@ -26,13 +26,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 		
 		itemBuilder(ItemGenerated, "everlasting_ender_pearl");
 		itemBuilder(ItemGenerated, "crystal_shell");
-		itemBuilder(ItemGenerated, "waystone_core");
-		itemBuilder(ItemGenerated, "waystone_block_deepslate");
+		itemBuilder(ItemGenerated, "waystone_block");
 		itemBuilder(ItemGenerated, "resonance_crystal_shard");
 		itemBuilder(ItemGenerated, "rift_claw");
 		
-		blockModel(BlockInit.RESONANCE_CRYSTAL_BLOCK);	
-		blockModel(BlockInit.BUDDING_RESONANCE_CRYSTAL);
+		singleLayerBlockModel(BlockInit.RIFT_CORE_BLOCK, getExistingFile(mcLoc("wsaws:block/rift_core_block")));
+		
+		simpleBlockItem(BlockInit.RESONANCE_CRYSTAL_BLOCK.get());
+		simpleBlockItem(BlockInit.BUDDING_RESONANCE_CRYSTAL.get());
 		singleLayerBlockModel(BlockInit.RESONANCE_CRYSTAL_CLUSTER, ItemGenerated);
 		singleLayerBlockModel(BlockInit.LARGE_RESONANCE_CRYSTAL_BUD, ItemGenerated);
 		singleLayerBlockModel(BlockInit.MEDIUM_RESONANCE_CRYSTAL_BUD, ItemGenerated);

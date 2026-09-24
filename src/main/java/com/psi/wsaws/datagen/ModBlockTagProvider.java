@@ -23,7 +23,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 	protected void addTags(Provider p_256380_) {
 		//mine with pickaxe
 		this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
-				BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get(),
+				BlockInit.WAYSTONE_BLOCK.get(),
 				
 				BlockInit.RESONANCE_CRYSTAL_BLOCK.get(),
 				BlockInit.RESONANCE_CRYSTAL_CLUSTER.get(),
@@ -33,13 +33,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 		
 		//tool level
 		this.tag(BlockTags.NEEDS_STONE_TOOL).add(
-				BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get(),
-				
 				BlockInit.RESONANCE_CRYSTAL_BLOCK.get(),
 				BlockInit.RESONANCE_CRYSTAL_CLUSTER.get(),
 				BlockInit.LARGE_RESONANCE_CRYSTAL_BUD.get(),
 				BlockInit.MEDIUM_RESONANCE_CRYSTAL_BUD.get(),
 				BlockInit.SMALL_RESONANCE_CRYSTAL_BUD.get());
+		
+		this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
+				BlockInit.WAYSTONE_BLOCK.get());
 		
 		//crystal sound tag
 		this.tag(BlockTags.CRYSTAL_SOUND_BLOCKS).add(
@@ -47,7 +48,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 				BlockInit.BUDDING_RESONANCE_CRYSTAL.get());
 		
 		//vibration resonators
-		this.tag(BlockTags.VIBRATION_RESONATORS).add(BlockInit.RESONANCE_CRYSTAL_BLOCK.get());
+		this.tag(BlockTags.VIBRATION_RESONATORS).add(
+				BlockInit.RESONANCE_CRYSTAL_BLOCK.get());
 	}
 
 }
