@@ -22,25 +22,38 @@ public class BlockInit {
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, WSaWS.MODID);
 	
+	//rift core block
+	public static final DeferredHolder<Block, RiftCoreBlock> RIFT_CORE_BLOCK = register("rift_core_block",
+			() -> new RiftCoreBlock(BlockSetType.STONE, BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN).requiresCorrectToolForDrops().lightLevel((beh) -> {
+				return 5;
+			})
+					.noOcclusion()));
+	
 	//waystone blocks
-	public static final DeferredHolder<Block, WaystoneBlock> WAYSTONE_BLOCK_DEEPSLATE = register("waystone_block_deepslate",
-			() -> new WaystoneBlock(BlockSetType.STONE, BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).requiresCorrectToolForDrops().lightLevel((p_50828_) -> {
+	public static final DeferredHolder<Block, WaystoneBlock> WAYSTONE_BLOCK = register("waystone_block",
+			() -> new WaystoneBlock(BlockSetType.STONE, BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).lightLevel((p_50828_) -> {
 			      return 5;
-			   }).noOcclusion()));
+			   })
+					.noOcclusion()));
 	
 	//Resonance Crystal Blocks
 	public static final DeferredHolder<Block, ResonanceCrystalBlock> RESONANCE_CRYSTAL_BLOCK = register("resonance_crystal_block",
 			() -> new ResonanceCrystalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.COLOR_BLACK).lightLevel((p_50828_) -> {
 			      return 5;
-			   }).noOcclusion()));
+			   })
+					.noOcclusion()));
 	public static final DeferredHolder<Block, BuddingResonanceCrystalBlock> BUDDING_RESONANCE_CRYSTAL = register("budding_resonance_crystal",
 			() -> new BuddingResonanceCrystalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.COLOR_BLACK).lightLevel((p_50828_) -> {
 			      return 5;
-			   }).noOcclusion()));
+			   })
+					.noOcclusion()
+					.randomTicks()
+					));
 	public static final DeferredHolder<Block, ResonanceCrystalClusterBlock> RESONANCE_CRYSTAL_CLUSTER = register("resonance_crystal_cluster",
 			() -> new ResonanceCrystalClusterBlock(7, 3, BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_CLUSTER).mapColor(MapColor.COLOR_BLACK).lightLevel((p_50828_) -> {
 			      return 5;
-			   }).noOcclusion()));
+			   })
+					.noOcclusion()));
 	public static final DeferredHolder<Block, ResonanceCrystalClusterBlock> LARGE_RESONANCE_CRYSTAL_BUD = register("large_resonance_crystal_bud",
 			() -> new ResonanceCrystalClusterBlock(5, 3, BlockBehaviour.Properties.ofFullCopy(RESONANCE_CRYSTAL_CLUSTER.get())));
 	public static final DeferredHolder<Block, ResonanceCrystalClusterBlock> MEDIUM_RESONANCE_CRYSTAL_BUD = register("medium_resonance_crystal_bud",
