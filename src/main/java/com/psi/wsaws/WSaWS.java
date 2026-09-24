@@ -3,6 +3,7 @@ package com.psi.wsaws;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.psi.wsaws.client.ClientModEvents;
 import com.psi.wsaws.client.render.ModEntityRendererManager;
 import com.psi.wsaws.common.block.BlockInit;
 import com.psi.wsaws.common.block.blockentity.BlockEntityInit;
@@ -37,6 +38,8 @@ public class WSaWS
         modBus.addListener(this::commonSetup);
         modBus.addListener(this::doClientStuff);
         
+        modBus.register(ClientModEvents.class);
+        
         CreativeTabInit.CREATIVE_MODE_TABS.register(modBus);
 		BlockInit.BLOCKS.register(modBus);
 		ItemInit.ITEMS.register(modBus);
@@ -53,7 +56,7 @@ public class WSaWS
     }
     
     private void doClientStuff(final FMLClientSetupEvent event) {
-    	ItemBlockRenderTypes.setRenderLayer(BlockInit.WAYSTONE_BLOCK_DEEPSLATE.get(), RenderType.cutout());
+    	ItemBlockRenderTypes.setRenderLayer(BlockInit.WAYSTONE_BLOCK.get(), RenderType.cutout());
 		ModEntityRendererManager.registerRenderers();
 	}
 
