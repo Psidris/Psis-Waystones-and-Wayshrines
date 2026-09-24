@@ -16,11 +16,9 @@ public class ItemInit {
 
 	public static final DeferredHolder<Item, EverlastingEnderPearlItem> EVERLASTING_ENDER_PEARL = register("everlasting_ender_pearl",
 			() -> new EverlastingEnderPearlItem(new Item.Properties().fireResistant().stacksTo(1)));
+	
 	public static final DeferredHolder<Item, CrystalShell> CRYSTAL_SHELL = register("crystal_shell",
 			() -> new CrystalShell(new Item.Properties()));
-	
-	public static final DeferredHolder<Item, WaystoneCore> WAYSTONE_CORE = register("waystone_core",
-			() -> new WaystoneCore(new Item.Properties()));
 	
 	public static final DeferredHolder<Item, ResonanceShard> RESONANCE_SHARD = register("resonance_crystal_shard",
 			() -> new ResonanceShard(new Item.Properties()));
