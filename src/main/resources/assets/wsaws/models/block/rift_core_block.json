@@ -1,6 +1,5 @@
 {
-	"format_version": "1.9.0",
-	"credit": "Made with Blockbench",
+	"parent": "block/block",
 	"textures": {
 		"0": "wsaws:block/rift_core_block",
 		"particle": "wsaws:block/rift_core_block"

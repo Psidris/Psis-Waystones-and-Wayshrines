@@ -1,6 +1,4 @@
 {
-	"format_version": "1.9.0",
-	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "wsaws:block/retexture_base",
 		"particle": "wsaws:block/retexture_base"
@@ -8,8 +6,8 @@
 	"elements": [
 		{
 			"name": "core",
-			"from": [3, 9, 3],
-			"to": [13, 25, 13],
+			"from": [3, 8, 3],
+			"to": [13, 24, 13],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 0]},
 			"faces": {

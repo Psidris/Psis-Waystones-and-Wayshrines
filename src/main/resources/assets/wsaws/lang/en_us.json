@@ -22,33 +22,36 @@
 	"advancements.wsaws.chorus_eaten.title" : "What Just Happened?",
 	"advancements.wsaws.chorus_eaten.desc": "Consume a chorus fruit and find yourself someplace else.",
 	
-	"advancements.wsaws.how_curious_amethyst.title": "Singing Stones",
-	"advancements.wsaws.how_curious_amethyst.desc": "Uncover an amethyst geode.",
+	"advancements.wsaws.how_curious_ender_pearl.title": "A Fragile Little Thing",
+	"advancements.wsaws.how_curious_ender_pearl.desc": "You might be able to find a way to keep it from breaking.",
 	
 	"advancements.wsaws.how_curious_crying_obi.title": "Should I feel bad...?",
 	"advancements.wsaws.how_curious_crying_obi.desc": "Learn what the obsidian was crying about.",
 	
+	"advancements.wsaws.how_curious_amethyst.title": "Singing Stones",
+	"advancements.wsaws.how_curious_amethyst.desc": "Observe the resonant properties of amethyst.",
+	
 	"advancements.wsaws.how_curious_echo_shard.title": "...Singing Stones?",
 	"advancements.wsaws.how_curious_echo_shard.desc": "Obtain an Echo Shard.",
 	
-	"advancements.wsaws.how_curious_ender_pearl.title": "A Fragile Little Thing",
-	"advancements.wsaws.how_curious_ender_pearl.desc": "You might be able to a way to keep it from breaking.",
+	"advancements.wsaws.dissonance.title": "Dissonance",
+	"advancements.wsaws.dissonance.desc": "Sculk and amethyst both have resonant properties, but won't fuse in a crafting table.",
+	
+	"advancements.wsaws.harmony.title": "Harmony",
+	"advancements.wsaws.harmony.desc": "These shards seem to store frequencies.",
 	
 	"advancements.wsaws.craft_crystal_shell.title": "Autopoiesis",
-	"advancements.wsaws.craft_crystal_shell.desc": "You made a suitable casing, but it won't work on it's own. Find a source of energy.",
+	"advancements.wsaws.craft_crystal_shell.desc": "You made a regrowing shell, but it won't work on it's own. Find a source of energy.",
 	
 	"advancements.wsaws.acquire_nether_star.title": "The Beginning...",
 	"advancements.wsaws.acquire_nether_star.desc": "You found a power source, but brute force simply won't do. There should be a more delicate workstation for this.",
 	
 	"advancements.wsaws.craft_perfect_pearl.title": "Oyster of the Stars",
-	"advancements.wsaws.craft_perfect_pearl.desc": "Craft a perfected pearl.",
+	"advancements.wsaws.craft_perfect_pearl.desc": "Craft an everlasting ender pearl.",
 	
 	"advancements.wsaws.craft_rift_core.title": "Wavefunction Collapse",
-	"advancements.wsaws.craft_rift_core.desc": "For some reason it split in two...",
-	
-	"advancements.wsaws.craft_waystone.title": "Oh Yeah, it's all coming together",
-	"advancements.wsaws.craft_waystone.desc": "Craft some waystones. Now find a way to connect them.",
-	
-	"advancements.wsaws.harmony.title": "Harmony",
-	"advancements.wsaws.harmony.desc": "The shards once separate now sing in sync. Maybe you can make use of this."
+	"advancements.wsaws.craft_rift_core.desc": "Tear space in two.",
+
+	"advancements.wsaws.craft_waystone.title": "Hammer Time",
+	"advancements.wsaws.craft_waystone.desc": "Now that you have the core, it's time to put two and two together. Drop an anvil on a Rift Core sandwiched between two blocks, and use a Rift Claw to connect it to its pair."
 }
