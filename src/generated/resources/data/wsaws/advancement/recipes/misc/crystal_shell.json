@@ -5,10 +5,10 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:amethyst_shard"
+            "items": "wsaws:resonance_crystal_shard"
           },
           {
-            "items": "minecraft:quartz"
+            "items": "minecraft:echo_shard"
           }
         ]
       },

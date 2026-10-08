@@ -1,62 +1,1922 @@
 {
   "variants": {
-    "facing=east,half=lower,powered=false": {
+    "facing=east,half=lower,level=0,powered=false,waterlogged=false": {
       "model": "wsaws:block/waystone/waystone_block_lower",
       "y": 90
     },
-    "facing=east,half=lower,powered=true": {
+    "facing=east,half=lower,level=0,powered=false,waterlogged=true": {
       "model": "wsaws:block/waystone/waystone_block_lower",
       "y": 90
     },
-    "facing=east,half=upper,powered=false": {
+    "facing=east,half=lower,level=0,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=0,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=1,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=1,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=1,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=1,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=10,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=10,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=10,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=10,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=11,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=11,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=11,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=11,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=12,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=12,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=12,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=12,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=13,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=13,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=13,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=13,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=14,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=14,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=14,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=14,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=15,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=15,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=15,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=15,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=2,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=2,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=2,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=2,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=3,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=3,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=3,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=3,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=4,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=4,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=4,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=4,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=5,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=5,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=5,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=5,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=6,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=6,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=6,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=6,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=7,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=7,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=7,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=7,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=8,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=8,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=8,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=8,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=9,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=9,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=9,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=lower,level=9,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 90
+    },
+    "facing=east,half=upper,level=0,powered=false,waterlogged=false": {
       "model": "wsaws:block/waystone/waystone_block_upper",
       "y": 90
     },
-    "facing=east,half=upper,powered=true": {
+    "facing=east,half=upper,level=0,powered=false,waterlogged=true": {
       "model": "wsaws:block/waystone/waystone_block_upper",
       "y": 90
     },
-    "facing=north,half=lower,powered=false": {
+    "facing=east,half=upper,level=0,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=0,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=1,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=1,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=1,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=1,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=10,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=10,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=10,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=10,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=11,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=11,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=11,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=11,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=12,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=12,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=12,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=12,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=13,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=13,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=13,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=13,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=14,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=14,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=14,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=14,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=15,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=15,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=15,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=15,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=2,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=2,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=2,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=2,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=3,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=3,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=3,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=3,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=4,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=4,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=4,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=4,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=5,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=5,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=5,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=5,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=6,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=6,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=6,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=6,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=7,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=7,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=7,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=7,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=8,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=8,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=8,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=8,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=9,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=9,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=9,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=east,half=upper,level=9,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 90
+    },
+    "facing=north,half=lower,level=0,powered=false,waterlogged=false": {
       "model": "wsaws:block/waystone/waystone_block_lower"
     },
-    "facing=north,half=lower,powered=true": {
+    "facing=north,half=lower,level=0,powered=false,waterlogged=true": {
       "model": "wsaws:block/waystone/waystone_block_lower"
     },
-    "facing=north,half=upper,powered=false": {
+    "facing=north,half=lower,level=0,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=0,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=1,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=1,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=1,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=1,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=10,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=10,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=10,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=10,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=11,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=11,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=11,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=11,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=12,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=12,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=12,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=12,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=13,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=13,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=13,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=13,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=14,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=14,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=14,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=14,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=15,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=15,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=15,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=15,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=2,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=2,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=2,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=2,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=3,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=3,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=3,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=3,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=4,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=4,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=4,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=4,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=5,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=5,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=5,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=5,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=6,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=6,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=6,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=6,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=7,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=7,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=7,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=7,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=8,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=8,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=8,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=8,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=9,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=9,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=9,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=lower,level=9,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower"
+    },
+    "facing=north,half=upper,level=0,powered=false,waterlogged=false": {
       "model": "wsaws:block/waystone/waystone_block_upper"
     },
-    "facing=north,half=upper,powered=true": {
+    "facing=north,half=upper,level=0,powered=false,waterlogged=true": {
       "model": "wsaws:block/waystone/waystone_block_upper"
     },
-    "facing=south,half=lower,powered=false": {
+    "facing=north,half=upper,level=0,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=0,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=1,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=1,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=1,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=1,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=10,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=10,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=10,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=10,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=11,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=11,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=11,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=11,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=12,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=12,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=12,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=12,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=13,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=13,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=13,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=13,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=14,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=14,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=14,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=14,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=15,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=15,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=15,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=15,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=2,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=2,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=2,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=2,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=3,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=3,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=3,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=3,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=4,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=4,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=4,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=4,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=5,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=5,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=5,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=5,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=6,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=6,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=6,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=6,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=7,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=7,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=7,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=7,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=8,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=8,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=8,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=8,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=9,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=9,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=9,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=north,half=upper,level=9,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper"
+    },
+    "facing=south,half=lower,level=0,powered=false,waterlogged=false": {
       "model": "wsaws:block/waystone/waystone_block_lower",
       "y": 180
     },
-    "facing=south,half=lower,powered=true": {
+    "facing=south,half=lower,level=0,powered=false,waterlogged=true": {
       "model": "wsaws:block/waystone/waystone_block_lower",
       "y": 180
     },
-    "facing=south,half=upper,powered=false": {
+    "facing=south,half=lower,level=0,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=0,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=1,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=1,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=1,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=1,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=10,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=10,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=10,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=10,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=11,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=11,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=11,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=11,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=12,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=12,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=12,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=12,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=13,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=13,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=13,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=13,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=14,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=14,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=14,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=14,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=15,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=15,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=15,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=15,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=2,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=2,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=2,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=2,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=3,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=3,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=3,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=3,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=4,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=4,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=4,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=4,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=5,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=5,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=5,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=5,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=6,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=6,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=6,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=6,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=7,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=7,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=7,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=7,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=8,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=8,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=8,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=8,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=9,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=9,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=9,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=lower,level=9,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 180
+    },
+    "facing=south,half=upper,level=0,powered=false,waterlogged=false": {
       "model": "wsaws:block/waystone/waystone_block_upper",
       "y": 180
     },
-    "facing=south,half=upper,powered=true": {
+    "facing=south,half=upper,level=0,powered=false,waterlogged=true": {
       "model": "wsaws:block/waystone/waystone_block_upper",
       "y": 180
     },
-    "facing=west,half=lower,powered=false": {
+    "facing=south,half=upper,level=0,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=0,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=1,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=1,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=1,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=1,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=10,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=10,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=10,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=10,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=11,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=11,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=11,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=11,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=12,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=12,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=12,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=12,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=13,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=13,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=13,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=13,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=14,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=14,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=14,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=14,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=15,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=15,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=15,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=15,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=2,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=2,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=2,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=2,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=3,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=3,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=3,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=3,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=4,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=4,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=4,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=4,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=5,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=5,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=5,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=5,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=6,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=6,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=6,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=6,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=7,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=7,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=7,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=7,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=8,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=8,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=8,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=8,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=9,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=9,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=9,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=south,half=upper,level=9,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 180
+    },
+    "facing=west,half=lower,level=0,powered=false,waterlogged=false": {
       "model": "wsaws:block/waystone/waystone_block_lower",
       "y": 270
     },
-    "facing=west,half=lower,powered=true": {
+    "facing=west,half=lower,level=0,powered=false,waterlogged=true": {
       "model": "wsaws:block/waystone/waystone_block_lower",
       "y": 270
     },
-    "facing=west,half=upper,powered=false": {
+    "facing=west,half=lower,level=0,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=0,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=1,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=1,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=1,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=1,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=10,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=10,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=10,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=10,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=11,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=11,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=11,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=11,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=12,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=12,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=12,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=12,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=13,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=13,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=13,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=13,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=14,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=14,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=14,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=14,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=15,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=15,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=15,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=15,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=2,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=2,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=2,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=2,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=3,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=3,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=3,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=3,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=4,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=4,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=4,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=4,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=5,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=5,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=5,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=5,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=6,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=6,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=6,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=6,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=7,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=7,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=7,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=7,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=8,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=8,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=8,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=8,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=9,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=9,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=9,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=lower,level=9,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_lower",
+      "y": 270
+    },
+    "facing=west,half=upper,level=0,powered=false,waterlogged=false": {
       "model": "wsaws:block/waystone/waystone_block_upper",
       "y": 270
     },
-    "facing=west,half=upper,powered=true": {
+    "facing=west,half=upper,level=0,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=0,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=0,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=1,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=1,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=1,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=1,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=10,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=10,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=10,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=10,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=11,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=11,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=11,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=11,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=12,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=12,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=12,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=12,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=13,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=13,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=13,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=13,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=14,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=14,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=14,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=14,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=15,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=15,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=15,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=15,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=2,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=2,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=2,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=2,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=3,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=3,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=3,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=3,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=4,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=4,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=4,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=4,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=5,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=5,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=5,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=5,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=6,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=6,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=6,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=6,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=7,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=7,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=7,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=7,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=8,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=8,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=8,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=8,powered=true,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=9,powered=false,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=9,powered=false,waterlogged=true": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=9,powered=true,waterlogged=false": {
+      "model": "wsaws:block/waystone/waystone_block_upper",
+      "y": 270
+    },
+    "facing=west,half=upper,level=9,powered=true,waterlogged=true": {
       "model": "wsaws:block/waystone/waystone_block_upper",
       "y": 270
     }

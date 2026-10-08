@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:wsaws/how_curious_echo_shard",
+  "parent": "minecraft:wsaws/how_curious_ender_pearl",
   "criteria": {
     "craft_crystal_shell": {
       "conditions": {
@@ -13,6 +13,7 @@
     }
   },
   "display": {
+    "announce_to_chat": false,
     "description": {
       "translate": "advancements.wsaws.craft_crystal_shell.desc"
     },

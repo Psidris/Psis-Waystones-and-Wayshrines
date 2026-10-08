@@ -1,0 +1,11 @@
+// 1.21.1	2026-10-07T21:30:04.0247402	Recipes
+31ebc5674c5cd7bee79ea9fa4d2346c11049b4d5 data/minecraft/advancement/recipes/tools/everlasting_ender_pearl_smithing.json
+898f270d66cd18fe3340df1c060a2ebddd35ce33 data/minecraft/recipe/everlasting_ender_pearl_smithing.json
+7a7ea3c62458725beea998bead8cdbe538ed4b08 data/wsaws/advancement/recipes/misc/crystal_shell.json
+509f0d66a1b899fc7ca0d2684be417f16692bac9 data/wsaws/advancement/recipes/misc/resonance_crystal_block.json
+99d8d3df00f3c44bc298943befca7e3d0f09a7e9 data/wsaws/advancement/recipes/misc/rift_core_block.json
+e239e1446eefc63f2c9d2cd5a353bd9b391fd705 data/wsaws/advancement/recipes/tools/rift_claw.json
+8368bffd7b8395b497ba697421e49a5b41da1fe5 data/wsaws/recipe/crystal_shell.json
+b5433b6976a03439ba2da226f2279018115ffe7d data/wsaws/recipe/resonance_crystal_block.json
+347780e6b0fb3b421b396c89a4b13e8580578426 data/wsaws/recipe/rift_claw.json
+6e5153ee796d812c9c1bbc4dda66f3d453ce36f2 data/wsaws/recipe/rift_core_block.json

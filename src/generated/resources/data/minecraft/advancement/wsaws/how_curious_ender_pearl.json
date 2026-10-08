@@ -1,16 +1,19 @@
 {
   "parent": "minecraft:wsaws/root",
   "criteria": {
-    "how_curious_ender_pearl": {
+    "found_enderpearl": {
       "conditions": {
-        "item": {
-          "items": "minecraft:ender_pearl"
-        }
+        "items": [
+          {
+            "items": "minecraft:ender_pearl"
+          }
+        ]
       },
-      "trigger": "minecraft:consume_item"
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
+    "announce_to_chat": false,
     "description": {
       "translate": "advancements.wsaws.how_curious_ender_pearl.desc"
     },
@@ -25,7 +28,7 @@
   },
   "requirements": [
     [
-      "how_curious_ender_pearl"
+      "found_enderpearl"
     ]
   ],
   "sends_telemetry_event": true

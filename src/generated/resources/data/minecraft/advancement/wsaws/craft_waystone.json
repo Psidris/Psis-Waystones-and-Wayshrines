@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:wsaws/craft_rift_core",
   "criteria": {
-    "craft_waystone": {
+    "craft_rift_core": {
       "conditions": {
         "items": [
           {
-            "items": "wsaws:waystone_block"
+            "items": "wsaws:rift_core_block"
           }
         ]
       },
@@ -13,6 +13,7 @@
     }
   },
   "display": {
+    "announce_to_chat": false,
     "description": {
       "translate": "advancements.wsaws.craft_waystone.desc"
     },
@@ -20,15 +21,16 @@
     "hidden": true,
     "icon": {
       "count": 1,
-      "id": "wsaws:waystone_block"
+      "id": "minecraft:anvil"
     },
+    "show_toast": false,
     "title": {
       "translate": "advancements.wsaws.craft_waystone.title"
     }
   },
   "requirements": [
     [
-      "craft_waystone"
+      "craft_rift_core"
     ]
   ],
   "sends_telemetry_event": true

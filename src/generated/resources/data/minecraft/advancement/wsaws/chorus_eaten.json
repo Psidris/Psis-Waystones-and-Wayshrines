@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:wsaws/root",
+  "parent": "minecraft:wsaws/how_curious_crying_obi",
   "criteria": {
     "chorus_eaten": {
       "conditions": {

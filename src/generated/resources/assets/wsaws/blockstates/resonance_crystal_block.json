@@ -1,7 +1,22 @@
 {
   "variants": {
-    "": {
-      "model": "wsaws:block/resonance_crystal_block"
+    "phase=0": {
+      "model": "wsaws:block/resonance_crystal_block/0"
+    },
+    "phase=1": {
+      "model": "wsaws:block/resonance_crystal_block/1"
+    },
+    "phase=2": {
+      "model": "wsaws:block/resonance_crystal_block/2"
+    },
+    "phase=3": {
+      "model": "wsaws:block/resonance_crystal_block/3"
+    },
+    "phase=4": {
+      "model": "wsaws:block/resonance_crystal_block/4"
+    },
+    "phase=5": {
+      "model": "wsaws:block/resonance_crystal_block/5"
     }
   }
 }

@@ -1,0 +1,7 @@
+// 1.21.1	2026-10-08T13:56:51.7392506	Tags for minecraft:block mod id wsaws
+a63f2051835f82515d7eee7a45965ac2abb4907e data/minecraft/tags/block/crystal_sound_blocks.json
+59c90b9b92b73fc66eaa1cb7e48cc1a30086e2f0 data/minecraft/tags/block/mineable/pickaxe.json
+c320ff00adbe86f882d9858749e491cb883bddce data/minecraft/tags/block/needs_diamond_tool.json
+e2ebf7c024139b42a86abb64eba4715cc3de345d data/minecraft/tags/block/needs_stone_tool.json
+142370368e43b7d4da321528401df987a6ce35d4 data/minecraft/tags/block/sculk_replaceable.json
+089f719a6435a35bb8a7a9dc6af50a78762c25da data/minecraft/tags/block/vibration_resonators.json

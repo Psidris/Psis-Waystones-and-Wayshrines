@@ -1,13 +1,48 @@
 {
   "criteria": {
-    "wsaws/root": {
+    "chorus_eaten": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:chorus_fruit"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "found_amethyst": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:amethyst_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "found_crying_obi": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:crying_obsidian"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "found_echo_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:echo_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "found_enderpearl": {
       "conditions": {
         "items": [
           {
             "items": "minecraft:ender_pearl"
-          },
-          {
-            "items": "minecraft:chorus_fruit"
           }
         ]
       },
@@ -30,7 +65,19 @@
   },
   "requirements": [
     [
-      "wsaws/root"
+      "found_enderpearl"
+    ],
+    [
+      "chorus_eaten"
+    ],
+    [
+      "found_amethyst"
+    ],
+    [
+      "found_echo_shard"
+    ],
+    [
+      "found_crying_obi"
     ]
   ],
   "sends_telemetry_event": true

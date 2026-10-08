@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:wsaws/craft_perfect_pearl",
+  "parent": "minecraft:wsaws/chorus_eaten",
   "criteria": {
     "craft_rift_core": {
       "conditions": {

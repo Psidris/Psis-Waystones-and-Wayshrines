@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:wsaws/root",
   "criteria": {
-    "how_curious_echo_shard": {
+    "found_echo_shard": {
       "conditions": {
         "items": [
           {
@@ -13,6 +13,7 @@
     }
   },
   "display": {
+    "announce_to_chat": false,
     "description": {
       "translate": "advancements.wsaws.how_curious_echo_shard.desc"
     },
@@ -27,7 +28,7 @@
   },
   "requirements": [
     [
-      "how_curious_echo_shard"
+      "found_echo_shard"
     ]
   ],
   "sends_telemetry_event": true

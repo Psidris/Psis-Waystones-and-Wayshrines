@@ -1,14 +1,11 @@
 {
-  "parent": "minecraft:wsaws/how_curious_echo_shard",
+  "parent": "minecraft:wsaws/how_curious_amethyst",
   "criteria": {
-    "harmony": {
+    "acquire_resonance_shard": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:amethyst_shard"
-          },
-          {
-            "items": "minecraft:echo_shard"
+            "items": "wsaws:resonance_crystal_shard"
           }
         ]
       },
@@ -30,7 +27,7 @@
   },
   "requirements": [
     [
-      "harmony"
+      "acquire_resonance_shard"
     ]
   ],
   "sends_telemetry_event": true

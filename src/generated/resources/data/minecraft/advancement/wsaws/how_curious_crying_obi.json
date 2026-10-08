@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:wsaws/root",
+  "parent": "minecraft:wsaws/harmony",
   "criteria": {
-    "how_curious_crying_obi": {
+    "found_crying_obi": {
       "conditions": {
         "items": [
           {
@@ -19,6 +19,7 @@
     }
   },
   "display": {
+    "announce_to_chat": false,
     "description": {
       "translate": "advancements.wsaws.how_curious_crying_obi.desc"
     },
@@ -36,7 +37,7 @@
       "traveled_dimensions"
     ],
     [
-      "how_curious_crying_obi"
+      "found_crying_obi"
     ]
   ],
   "sends_telemetry_event": true
