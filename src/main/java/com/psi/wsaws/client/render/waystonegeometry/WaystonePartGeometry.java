@@ -1,9 +1,10 @@
-package com.psi.wsaws.client;
+package com.psi.wsaws.client.render.waystonegeometry;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import com.psi.wsaws.WSaWS;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.model.BakedModel;
@@ -21,8 +22,8 @@ public record WaystonePartGeometry(Map<String, ResourceLocation> parts) implemen
 	public BakedModel bake(IGeometryBakingContext context, ModelBaker baker, Function<Material, TextureAtlasSprite> spriteGetter, ModelState modelState, ItemOverrides overrides) {
 		
 		Map<String, BakedModel> baked = new LinkedHashMap<>();
-		parts.forEach((name,loc) -> baked.put(name, baker.bake(loc, modelState)));
-		
+		parts.forEach((name,loc) -> baked.put(name, baker.bake(loc, modelState, spriteGetter)));
+
 		TextureAtlasSprite particle = spriteGetter.apply(context.getMaterial("particle"));
 		
 		return new WaystoneBlockBakedModel(baked, particle, context.useAmbientOcclusion(), context.isGui3d(), context.useBlockLight(), overrides);

@@ -35,14 +35,17 @@ public class ResonanceCrystalClusterBlock extends ResonanceCrystalBlock implemen
 
 	public ResonanceCrystalClusterBlock(int offsetX, int offsetY, Properties properties) {
 		super(properties);
-	      this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
+	      this.registerDefaultState(
+				  this.defaultBlockState()
+						  .setValue(WATERLOGGED, Boolean.valueOf(false))
+						  .setValue(FACING, Direction.UP)
+						  .setValue(PHASE, Integer.valueOf(0)));
 	      this.upAabb = Block.box((double)offsetY, 0.0D, (double)offsetY, (double)(16 - offsetY), (double)offsetX, (double)(16 - offsetY));
 	      this.downAabb = Block.box((double)offsetY, (double)(16 - offsetX), (double)offsetY, (double)(16 - offsetY), 16.0D, (double)(16 - offsetY));
 	      this.northAabb = Block.box((double)offsetY, (double)offsetY, (double)(16 - offsetX), (double)(16 - offsetY), (double)(16 - offsetY), 16.0D);
 	      this.southAabb = Block.box((double)offsetY, (double)offsetY, 0.0D, (double)(16 - offsetY), (double)(16 - offsetY), (double)offsetX);
 	      this.eastAabb = Block.box(0.0D, (double)offsetY, (double)offsetY, (double)offsetX, (double)(16 - offsetY), (double)(16 - offsetY));
 	      this.westAabb = Block.box((double)(16 - offsetX), (double)offsetY, (double)offsetY, 16.0D, (double)(16 - offsetY), (double)(16 - offsetY));
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
@@ -87,7 +90,9 @@ public class ResonanceCrystalClusterBlock extends ResonanceCrystalBlock implemen
 		BlockPos blockpos = context.getClickedPos();
 		return this.defaultBlockState()
 				.setValue(WATERLOGGED, Boolean.valueOf(levelaccessor.getFluidState(blockpos).getType() == Fluids.WATER))
-				.setValue(FACING, context.getClickedFace());
+				.setValue(FACING, context.getClickedFace())
+				.setValue(PHASE, determinePhase(levelaccessor, blockpos))
+				.cycle(PHASE);
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {
@@ -103,6 +108,6 @@ public class ResonanceCrystalClusterBlock extends ResonanceCrystalBlock implemen
 	}
 
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
-		state.add(WATERLOGGED, FACING);
+		state.add(WATERLOGGED, FACING, PHASE);
 	}
 }

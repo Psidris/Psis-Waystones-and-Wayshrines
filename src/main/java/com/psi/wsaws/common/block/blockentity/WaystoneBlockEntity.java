@@ -8,6 +8,7 @@ import com.psi.wsaws.common.util.WaystoneValidationResult;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.Registries;
@@ -31,14 +32,13 @@ import net.neoforged.neoforge.client.model.data.ModelData;
 import net.neoforged.neoforge.client.model.data.ModelProperty;
 
 public class WaystoneBlockEntity extends BlockEntity {
-	@Nullable
 	private BlockPos linked_pos;
 	private int radius = 3;
-	public static final ModelProperty<TextureAtlasSprite> CORE_SPRITE = new ModelProperty<>();
-	public static final ModelProperty<TextureAtlasSprite> BOTTOM_SPRITE = new ModelProperty<>();
-	private BlockState bottomBlock = Blocks.COBBLED_DEEPSLATE.getStateDefinition().any();
-	private BlockState coreBlock = BlockInit.RIFT_CORE_BLOCK.get().getStateDefinition().any();
-	
+	public static ModelProperty<BlockState> BOTTOM_MODEL = new ModelProperty<>();
+	public static ModelProperty<BlockState> CORE_MODEL = new ModelProperty<>();
+	public BlockState bottomBlock = Blocks.COBBLED_DEEPSLATE.getStateDefinition().any();
+	public BlockState coreBlock = BlockInit.RIFT_CORE_BLOCK.get().getStateDefinition().any();
+
 	public WaystoneBlockEntity(BlockPos pos, BlockState state) {
 		super(BlockEntityInit.WAYSTONE_BLOCK_ENTITY.get(), pos, state);
 	}
@@ -95,12 +95,7 @@ public class WaystoneBlockEntity extends BlockEntity {
 			requestModelDataUpdate();
 		}
 	}
-	
-	public BlockState getTopState() {
-		if(this.getLevel().getBlockEntity(this.getBlockPos().above()) instanceof WaystoneBlockTopEntity ent) {
-			return ent.getTopState();
-		} else return null;
-	}
+
 	public BlockState getBottomState() { return bottomBlock;}
 	public BlockState getCoreState() { return coreBlock;}
 
@@ -108,13 +103,13 @@ public class WaystoneBlockEntity extends BlockEntity {
 	public ModelData getModelData() {
 		//WSaWS.LOGGER.debug("getModelData: bottom={}, core={}, top={}", bottomBlock, coreBlock, topBlock);
 		return ModelData.builder()
-				.with(CORE_SPRITE, getSpriteFor(coreBlock))
-				.with(BOTTOM_SPRITE, getSpriteFor(bottomBlock))
+				.with(CORE_MODEL, coreBlock)
+				.with(BOTTOM_MODEL, bottomBlock)
 				.build();
 	}
 	
-	private TextureAtlasSprite getSpriteFor(BlockState state) {
-		return Minecraft.getInstance().getBlockRenderer().getBlockModel(state).getParticleIcon(ModelData.EMPTY);
+	private BakedModel getModelFor(BlockState state) {
+		return Minecraft.getInstance().getBlockRenderer().getBlockModel(state);
 	}
 
 	public BlockPos getLinkedPos() {
@@ -194,12 +189,19 @@ public class WaystoneBlockEntity extends BlockEntity {
 		}
 	}
 	
-	public void requestTeleport(ServerPlayer player) {
+	public void requestTeleport(ServerLevel level, ServerPlayer player) {
 		if(!level.isClientSide && findFreePosition(linked_pos.relative(level.getBlockState(linked_pos).getValue(BlockStateProperties.HORIZONTAL_FACING)), radius) instanceof BlockPos pos && pos != null) {
-			//WSaWS.LOGGER.debug("Target of {} is valid, teleporting", pos);
-			player.teleportTo(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
-			level.playLocalSound(this.getBlockPos(), SoundEvents.PLAYER_TELEPORT, SoundSource.BLOCKS, 0.5F, RandomSource.create().nextFloat() * 0.4F + 0.8F, false);
-			level.playLocalSound(linked_pos, SoundEvents.PLAYER_TELEPORT, SoundSource.BLOCKS, 0.5F, RandomSource.create().nextFloat() * 0.4F + 0.8F, false);
+			//WSaWS.LOGGER.debug("Target of {} near {} is valid, teleporting", pos, linked_pos);
+			player.teleportTo(
+					level,
+					pos.getX() + 0.5,
+					pos.getY() + 0.5,
+					pos.getZ() + 0.5,
+					level.getBlockState(this.getLinkedPos()).getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot(),
+					player.getXRot()
+			);
+			level.playSound(null, this.getBlockPos(), SoundEvents.PLAYER_TELEPORT, SoundSource.BLOCKS, 1f, level.getRandom().nextFloat() * 0.1F + 0.9F);
+			level.playSound(null, this.getLinkedPos(), SoundEvents.PLAYER_TELEPORT, SoundSource.BLOCKS, 1f, level.getRandom().nextFloat() * 0.1F + 0.9F);
 			//WSaWS.LOGGER.debug("teleport success");
 		}else {
 			//WSaWS.LOGGER.debug("teleport fail, position at {} not clear", linked_pos);
@@ -208,10 +210,10 @@ public class WaystoneBlockEntity extends BlockEntity {
 	
 	private BlockPos findFreePosition(BlockPos pos, int radius) {
 		//BlockPos.spiralAround(pos, radius, level.getBlockState(pos).getValue(BlockStateProperties.HORIZONTAL_FACING), level.getBlockState(pos).getValue(BlockStateProperties.HORIZONTAL_FACING).getClockWise())
-		for(BlockPos check : BlockPos.withinManhattan(pos, radius, radius, radius)
-				) {
+		for(BlockPos check : BlockPos.withinManhattan(pos, radius, radius, radius)) {
 			//WSaWS.LOGGER.debug("Checking if block at {} is air", check);
-			if((level.getBlockState(check).isAir() || level.getBlockState(check).is(Blocks.WATER)) && (level.getBlockState(check.above()).isAir() || level.getBlockState(check.above()).is(Blocks.WATER))) {
+			if(!level.getBlockState(check).isSuffocating(level, check) && !level.getBlockState(check).isSuffocating(level, check.above())) {
+				
 				return check;
 			}
 		}
@@ -226,6 +228,6 @@ public class WaystoneBlockEntity extends BlockEntity {
 	}
 
 	public static void tick(Level level, BlockPos pos, BlockState state, WaystoneBlockEntity entity) {
-		
+
 	}
 }

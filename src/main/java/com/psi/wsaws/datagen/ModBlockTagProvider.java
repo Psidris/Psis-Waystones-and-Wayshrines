@@ -2,6 +2,7 @@ package com.psi.wsaws.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
+import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.Nullable;
 
 import com.psi.wsaws.WSaWS;
@@ -21,6 +22,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
 	@Override
 	protected void addTags(Provider p_256380_) {
+
 		//mine with pickaxe
 		this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
 				BlockInit.WAYSTONE_BLOCK.get(),
@@ -40,7 +42,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 				BlockInit.SMALL_RESONANCE_CRYSTAL_BUD.get());
 		
 		this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
-				BlockInit.WAYSTONE_BLOCK.get());
+				BlockInit.RIFT_CORE_BLOCK.get());
 		
 		//crystal sound tag
 		this.tag(BlockTags.CRYSTAL_SOUND_BLOCKS).add(
@@ -50,6 +52,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 		//vibration resonators
 		this.tag(BlockTags.VIBRATION_RESONATORS).add(
 				BlockInit.RESONANCE_CRYSTAL_BLOCK.get());
-	}
 
+		this.tag(BlockTags.SCULK_REPLACEABLE).add(
+				Blocks.AMETHYST_BLOCK,
+				Blocks.BUDDING_AMETHYST
+		);
+	}
 }

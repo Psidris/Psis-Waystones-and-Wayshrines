@@ -33,7 +33,7 @@ public class ModRecipeProvider extends RecipeProvider {
 					.pattern("R R")
 					.pattern("RLR")
 					.pattern("LBL")
-					.unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemInit.RESONANCE_SHARD.get()))
+					.unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(BlockInit.RIFT_CORE_BLOCK.get()))
 					.save(recipeOutput);
 				
 				ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemInit.CRYSTAL_SHELL.get())
@@ -42,10 +42,10 @@ public class ModRecipeProvider extends RecipeProvider {
 					.pattern("RER")
 					.pattern("E E")
 					.pattern("RER")
-					.unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(Items.AMETHYST_SHARD, Items.QUARTZ))
+					.unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemInit.RESONANCE_SHARD.get(), Items.ECHO_SHARD))
 					.save(recipeOutput);
 				
-				SmithingTransformRecipeBuilder.smithing(Ingredient.of(ItemInit.CRYSTAL_SHELL.get()), Ingredient.of(Items.ENDER_EYE), Ingredient.of(Items.NETHER_STAR), RecipeCategory.TOOLS, ItemInit.EVERLASTING_ENDER_PEARL.get())
+				SmithingTransformRecipeBuilder.smithing(Ingredient.of(ItemInit.CRYSTAL_SHELL.get()), Ingredient.of(Items.ENDER_PEARL), Ingredient.of(Items.NETHER_STAR), RecipeCategory.TOOLS, ItemInit.EVERLASTING_ENDER_PEARL.get())
 					.unlocks("has_item", has(Items.NETHER_STAR))
 					.save(recipeOutput, "everlasting_ender_pearl_smithing");
 				
@@ -66,15 +66,6 @@ public class ModRecipeProvider extends RecipeProvider {
 					.pattern("RPR")
 					.pattern("OCO")
 					.unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(Items.CHORUS_FRUIT, ItemInit.RESONANCE_SHARD.get()))
-					.save(recipeOutput);
-				
-				ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, BlockInit.WAYSTONE_BLOCK.get())
-					.define('C', BlockInit.RIFT_CORE_BLOCK.get())
-					.define('D', Items.COBBLED_DEEPSLATE)
-					.pattern("D")
-					.pattern("C")
-					.pattern("D")
-					.unlockedBy("has_item", has(BlockInit.RIFT_CORE_BLOCK.get()))
 					.save(recipeOutput);
 	}
 }

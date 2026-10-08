@@ -1,5 +1,13 @@
 package com.psi.wsaws.mixin;
 
+import com.psi.wsaws.common.block.WaystoneBlock;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.entity.ai.targeting.TargetingConditions;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.StainedGlassBlock;
+import net.minecraft.world.phys.AABB;
+import net.neoforged.neoforge.common.data.internal.NeoForgeBlockTagsProvider;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -28,32 +36,34 @@ public class AnvilCompactMixin {
 	@Inject(method = "onLand", at = @At("HEAD"), cancellable = true)
 	private void wsaws$onLand(Level level, BlockPos pos, BlockState state, BlockState replaceableState, FallingBlockEntity fallingBlock, CallbackInfo ci) {
         if (level.isClientSide() || !(level instanceof ServerLevel serverLevel)) return;
-        WSaWS.LOGGER.debug("anvil crush event");
-        // pos = where the anvil got stuck, i.e. one block above the obstruction —
-        // so the core block you're crushing onto is pos.below()
-        BlockPos corePos = pos.below(2);
-        BlockState coreState = level.getBlockState(corePos);
+        //WSaWS.LOGGER.debug("anvil crush event");
         
-        if (coreState.is(BlockInit.RIFT_CORE_BLOCK.get())) {
-            WSaWS.LOGGER.debug("{} spotted", coreState);
+        if (level.getBlockState(pos.below(2)).is(BlockInit.RIFT_CORE_BLOCK.get())) {
+            //WSaWS.LOGGER.debug("{} spotted", coreState);
+			BlockPos corePos = pos.below(2);
+			BlockState coreState = level.getBlockState(corePos);
             BlockState bottomState = level.getBlockState(corePos.below());
             BlockState aboveState = level.getBlockState(corePos.above());
             
-			if (bottomState.isCollisionShapeFullBlock(serverLevel, corePos.below()) && aboveState.isCollisionShapeFullBlock(serverLevel, corePos.above())) {
+			if (isBlockValid(bottomState, serverLevel, corePos.below()) && isBlockValid(aboveState, serverLevel, corePos.above())) {
 				level.destroyBlock(pos, true);
 				ci.cancel(); // skip vanilla's own onBrokenAfterFall (sound/particle handling)
 
 				level.destroyBlock(corePos, false);
 				level.destroyBlock(corePos.above(), false);
 				level.destroyBlock(corePos.below(), false);
-
-				BlockState blockstate = BlockInit.WAYSTONE_BLOCK.get().getStateDefinition().any()
+				BlockState blockstate = BlockInit.WAYSTONE_BLOCK.get().defaultBlockState()
 						.setValue(BlockStateProperties.HORIZONTAL_FACING, coreState.getValue(BlockStateProperties.HORIZONTAL_FACING))
-						.setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER);
-				
+						.setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER)
+						.setValue(BlockStateProperties.POWERED, level.hasNeighborSignal(corePos.below()))
+						.setValue(WaystoneBlock.LEVEL, Math.max(5, bottomState.getLightEmission(level, corePos.above())));
+
 				level.setBlock(corePos.below(), blockstate, 3);
 				
-				blockstate = blockstate.setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER);
+				blockstate = blockstate
+						.setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER)
+						.setValue(BlockStateProperties.POWERED, level.hasNeighborSignal(corePos))
+						.setValue(WaystoneBlock.LEVEL, Math.max(5, aboveState.getLightEmission(level, corePos.above())));
 				
 				level.setBlock(corePos, blockstate, 3);
 
@@ -63,9 +73,16 @@ public class AnvilCompactMixin {
 				if (level.getBlockEntity(corePos.below()) instanceof WaystoneBlockEntity ent) {
 					ent.setStates(bottomState, coreState);
 				}
-
 			}
 		}
 
+	}
+
+	private boolean isBlockValid(BlockState state, Level level, BlockPos pos){
+
+		return !state.hasBlockEntity()
+				&& state.isCollisionShapeFullBlock(level, pos)
+				&& !(state.is(BlockTags.IMPERMEABLE) || state.is(BlockTags.LEAVES))
+				;
 	}
 }

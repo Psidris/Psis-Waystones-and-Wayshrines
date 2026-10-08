@@ -1,5 +1,6 @@
 package com.psi.wsaws.mixin;
 
+import com.psi.wsaws.common.block.ResonanceCrystalBlock;
 import org.spongepowered.asm.mixin.Implements;
 import org.spongepowered.asm.mixin.Interface;
 import org.spongepowered.asm.mixin.Mixin;
@@ -22,7 +23,10 @@ public class AmethystSculkBehaviourMixin {
 		//WSaWS.LOGGER.debug("we're in");
 		if(level.getBlockState(cursor.getPos()).is(Blocks.AMETHYST_BLOCK)) {
 			//WSaWS.LOGGER.debug("yeah im looking at amethyst");
-			if (level.setBlock(cursor.getPos(), BlockInit.RESONANCE_CRYSTAL_BLOCK.get().getStateDefinition().any(), 3)) {
+			if (level.setBlock(cursor.getPos(),
+					BlockInit.RESONANCE_CRYSTAL_BLOCK.get().defaultBlockState()
+							.setValue(ResonanceCrystalBlock.PHASE, ResonanceCrystalBlock.determinePhase(level, pos))
+							.cycle(ResonanceCrystalBlock.PHASE), 3)) {
 				//WSaWS.LOGGER.debug("crystal replaced"); 
 				return cursor.getCharge()-1;
 			} else {

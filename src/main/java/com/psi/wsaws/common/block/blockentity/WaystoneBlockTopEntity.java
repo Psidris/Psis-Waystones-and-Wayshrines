@@ -1,9 +1,9 @@
 package com.psi.wsaws.common.block.blockentity;
 
-import com.psi.wsaws.WSaWS;
-
+import com.psi.wsaws.common.block.BlockInit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.Registries;
@@ -15,14 +15,14 @@ import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.data.ModelData;
 import net.neoforged.neoforge.client.model.data.ModelProperty;
 
 public class WaystoneBlockTopEntity extends BlockEntity {
-	public static final ModelProperty<TextureAtlasSprite> TOP_SPRITE = new ModelProperty<>();
-	private BlockState topBlock = Blocks.COBBLED_DEEPSLATE.getStateDefinition().any();
+
+	public static ModelProperty<BlockState> TOP_MODEL = new ModelProperty<>();
+	public BlockState topBlock = Blocks.COBBLED_DEEPSLATE.getStateDefinition().any();
 
 	public WaystoneBlockTopEntity(BlockPos pos, BlockState state) {
 		super(BlockEntityInit.WAYSTONE_BLOCK_TOP_ENTITY.get(), pos, state);
@@ -72,18 +72,17 @@ public class WaystoneBlockTopEntity extends BlockEntity {
 			requestModelDataUpdate();
 		}
 	}
-	
-	public BlockState getTopState() { return topBlock;}
+
+	public BlockState getTopState() {return topBlock;}
 
 	@Override
 	public ModelData getModelData() {
 		return ModelData.builder()
-				.with(TOP_SPRITE, getSpriteFor(topBlock))
+				.with(TOP_MODEL, topBlock)
 				.build();
 	}
 	
-	private TextureAtlasSprite getSpriteFor(BlockState state) {
-		return Minecraft.getInstance().getBlockRenderer().getBlockModel(state).getParticleIcon(ModelData.EMPTY);
+	private BakedModel getModelFor(BlockState state) {
+		return Minecraft.getInstance().getBlockRenderer().getBlockModel(state);
 	}
-
 }

@@ -1,5 +1,6 @@
 package com.psi.wsaws.mixin;
 
+import com.psi.wsaws.common.block.ResonanceCrystalBlock;
 import org.spongepowered.asm.mixin.Implements;
 import org.spongepowered.asm.mixin.Interface;
 import org.spongepowered.asm.mixin.Mixin;
@@ -22,7 +23,9 @@ public class BuddingAmethystSculkBehaviourMixin {
 	public int sculk$attemptUseCharge(SculkSpreader.ChargeCursor cursor, LevelAccessor level, BlockPos pos, RandomSource random, SculkSpreader spreader, boolean shouldConvertBlocks) {
 		//WSaWS.LOGGER.debug("we're in");
 		if(level.getBlockState(cursor.getPos()).is(Blocks.BUDDING_AMETHYST)) {
-			if (level.setBlock(cursor.getPos(), BlockInit.BUDDING_RESONANCE_CRYSTAL.get().getStateDefinition().any(), 3)) {
+			if (level.setBlock(cursor.getPos(), BlockInit.BUDDING_RESONANCE_CRYSTAL.get().defaultBlockState()
+					.setValue(ResonanceCrystalBlock.PHASE, ResonanceCrystalBlock.determinePhase(level, pos))
+					.cycle(ResonanceCrystalBlock.PHASE), 3)) {
 				//WSaWS.LOGGER.debug("crystal replaced"); 
 				return cursor.getCharge()-1;
 			} else {

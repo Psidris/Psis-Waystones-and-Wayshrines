@@ -1,4 +1,4 @@
-package com.psi.wsaws.client;
+package com.psi.wsaws.client.render.waystonegeometry;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -10,7 +10,6 @@ import com.google.gson.JsonParseException;
 import com.psi.wsaws.WSaWS;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.GsonHelper;
 import net.neoforged.neoforge.client.model.geometry.IGeometryLoader;
 
 public class WaystoneGeometryLoader implements IGeometryLoader<WaystonePartGeometry> {

@@ -1,16 +1,21 @@
 package com.psi.wsaws.datagen;
 
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
+import com.google.errorprone.annotations.Var;
 import com.psi.wsaws.WSaWS;
 import com.psi.wsaws.common.block.BlockInit;
+import com.psi.wsaws.common.block.ResonanceCrystalBlock;
 import com.psi.wsaws.common.block.ResonanceCrystalClusterBlock;
 
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
@@ -36,10 +41,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		waystoneBlock(BlockInit.WAYSTONE_BLOCK.get(), "waystone_block");
 		
 		horizontalBlock(BlockInit.RIFT_CORE_BLOCK.get(), models().getExistingFile(modLoc("block/rift_core_block")));
-		
-		simpleBlock(BlockInit.RESONANCE_CRYSTAL_BLOCK.get());
-		simpleBlock(BlockInit.BUDDING_RESONANCE_CRYSTAL.get());
-		buildResonanceCrystals(List.of(
+
+		buildResonanceCrystals(BlockInit.RESONANCE_CRYSTAL_BLOCK);
+		buildResonanceCrystals(BlockInit.BUDDING_RESONANCE_CRYSTAL);
+		buildResonanceClusters(List.of(
 				BlockInit.RESONANCE_CRYSTAL_CLUSTER,
 				BlockInit.LARGE_RESONANCE_CRYSTAL_BUD,
 				BlockInit.MEDIUM_RESONANCE_CRYSTAL_BUD,
@@ -62,10 +67,41 @@ public class ModBlockStateProvider extends BlockStateProvider {
         			.build();
         });
     }
-	
-	private void buildResonanceCrystals(List<DeferredHolder<Block, ResonanceCrystalClusterBlock>> list) {
+	private <T extends ResonanceCrystalBlock> void buildResonanceCrystals(DeferredHolder<Block, T> block) {
+		VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+		builder.forAllStates(state -> {
+			int phase = state.getValue(ResonanceCrystalBlock.PHASE);
+			ModelFile model = models().cubeAll(
+					"block/" + getName(block) + "/" + phase,
+					ResourceLocation.fromNamespaceAndPath(
+							WSaWS.MODID,
+							"block/" + getName(block) + "/" + phase));
+			Function<BlockState, ModelFile> modelFunc = $ -> model;
+			return ConfiguredModel.builder()
+					.modelFile(modelFunc.apply(state))
+					.build();
+		});
+	}
+
+	private void buildResonanceClusters(List<DeferredHolder<Block, ResonanceCrystalClusterBlock>> list) {
 		for(DeferredHolder<Block, ResonanceCrystalClusterBlock> block : list){
-	        directionalBlock(block.get(), models().cross(getName(block), ResourceLocation.fromNamespaceAndPath(WSaWS.MODID, "block/" + getName(block))).renderType("cutout"));
+			VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+			builder.forAllStates(state -> {
+				int phase = state.getValue(ResonanceCrystalClusterBlock.PHASE);
+				Direction dir = state.getValue(BlockStateProperties.FACING);
+				ModelFile model = models().cross(
+						"block/" + getName(block) + "/" + phase,
+						ResourceLocation.fromNamespaceAndPath(
+								WSaWS.MODID,
+								"block/" + getName(block) + "/" + phase))
+						.renderType("cutout");
+				Function<BlockState, ModelFile> modelFunc = $ -> model;
+				return ConfiguredModel.builder()
+						.modelFile(modelFunc.apply(state))
+						.rotationX(dir == Direction.DOWN ? 180 : dir.getAxis().isHorizontal() ? 90 : 0)
+						.rotationY(dir.getAxis().isVertical() ? 0 : (((int) dir.toYRot()) + 180) % 360)
+						.build();
+			});
 		}
 	}
 	

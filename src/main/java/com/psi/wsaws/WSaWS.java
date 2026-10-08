@@ -1,5 +1,7 @@
 package com.psi.wsaws;
 
+import com.psi.wsaws.client.render.WayshrineFogHandler;
+import com.psi.wsaws.common.effects.EffectsInit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -46,6 +48,7 @@ public class WSaWS
 		BlockEntityInit.BLOCK_ENTITY_TYPES.register(modBus);
 		EntityTypeInit.ENTITIES.register(modBus);
 		DataComponentTypeInit.DATA_COMPONENTS.register(modBus);
+        EffectsInit.EFFECTS.register(modBus);
 
         // Register ourselves for server and other game events we are interested in
         NeoForge.EVENT_BUS.register(this);
@@ -56,8 +59,7 @@ public class WSaWS
     }
     
     private void doClientStuff(final FMLClientSetupEvent event) {
-    	ItemBlockRenderTypes.setRenderLayer(BlockInit.WAYSTONE_BLOCK.get(), RenderType.cutout());
-		ModEntityRendererManager.registerRenderers();
+        ModEntityRendererManager.registerRenderers();
 	}
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

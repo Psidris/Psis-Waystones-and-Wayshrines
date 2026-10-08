@@ -1,5 +1,6 @@
 package com.psi.wsaws.client;
 
+import com.psi.wsaws.client.render.waystonegeometry.WaystoneGeometryLoader;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.ModelEvent;
 
@@ -8,5 +9,4 @@ public class ClientModEvents {
 	public static void registerGeometryLoaders(ModelEvent.RegisterGeometryLoaders event) {
 		event.register(WaystoneGeometryLoader.ID, WaystoneGeometryLoader.INSTANCE);
 	}
-
 }

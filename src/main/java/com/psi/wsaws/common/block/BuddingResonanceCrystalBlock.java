@@ -23,7 +23,6 @@ public class BuddingResonanceCrystalBlock extends ResonanceCrystalBlock implemen
 
 	public BuddingResonanceCrystalBlock(Properties p_49795_) {
 		super(p_49795_);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -53,7 +52,7 @@ public class BuddingResonanceCrystalBlock extends ResonanceCrystalBlock implemen
 	}
 
 	public static boolean canClusterGrowAtState(BlockState state) {
-		return state.isAir() || state.is(Blocks.SCULK_VEIN) || state.is(Blocks.WATER) && state.getFluidState().getAmount() == 8;
+		return state.isAir() || state.is(Blocks.SCULK_VEIN) || state.getFluidState().is(Fluids.WATER) && state.getFluidState().getAmount() == 8;
 	}
 	
 	private void growClusters(LevelAccessor level, BlockPos pos, RandomSource random) {

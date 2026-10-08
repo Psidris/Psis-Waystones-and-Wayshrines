@@ -27,4 +27,12 @@ public class BlockEntityInit {
 					BlockInit.WAYSTONE_BLOCK.get()
 	        ).build(null)
 	);
+
+	public static final Supplier<BlockEntityType<WayshrineBlockEntity>> WAYSHRINE_BLOCK_ENTITY = BLOCK_ENTITY_TYPES.register(
+			"wayshrine_block_entity",
+			() -> BlockEntityType.Builder.of(
+					WayshrineBlockEntity::new,
+					BlockInit.WAYSHRINE_BLOCK.get()
+			).build(null)
+	);
 }

@@ -12,9 +12,11 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -24,33 +26,58 @@ public class BlockInit {
 	
 	//rift core block
 	public static final DeferredHolder<Block, RiftCoreBlock> RIFT_CORE_BLOCK = register("rift_core_block",
-			() -> new RiftCoreBlock(BlockSetType.STONE, BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN).requiresCorrectToolForDrops().lightLevel((beh) -> {
+			() -> new RiftCoreBlock(BlockSetType.STONE, BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).lightLevel((beh) -> {
 				return 5;
 			})
 					.noOcclusion()));
 	
 	//waystone blocks
-	public static final DeferredHolder<Block, WaystoneBlock> WAYSTONE_BLOCK = register("waystone_block",
-			() -> new WaystoneBlock(BlockSetType.STONE, BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).lightLevel((p_50828_) -> {
-			      return 5;
-			   })
+	public static final DeferredHolder<Block, WaystoneBlock> WAYSTONE_BLOCK = registerNoItem("waystone_block",
+			() -> new WaystoneBlock(
+					BlockSetType.STONE,
+					BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)
+							.lightLevel((p_50828_) -> {
+			      				return 5;
+			   				})
+							.noOcclusion()
+							.forceSolidOff()
+			));
+
+	//wayshrine block
+	public static final DeferredHolder<Block, WayshrineBlock> WAYSHRINE_BLOCK = register("wayshrine_block",
+			() -> new WayshrineBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).lightLevel((p_50828_) -> {
+						return 5;
+					})
 					.noOcclusion()));
-	
+
 	//Resonance Crystal Blocks
 	public static final DeferredHolder<Block, ResonanceCrystalBlock> RESONANCE_CRYSTAL_BLOCK = register("resonance_crystal_block",
-			() -> new ResonanceCrystalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.COLOR_BLACK).lightLevel((p_50828_) -> {
-			      return 5;
-			   })
-					.noOcclusion()));
+			() -> new ResonanceCrystalBlock(
+					BlockBehaviour.Properties.of()
+							.mapColor(MapColor.COLOR_CYAN)
+							.strength(1.5F)
+							.sound(SoundType.AMETHYST)
+							.requiresCorrectToolForDrops()
+							.noOcclusion()
+							.lightLevel((p_50828_) -> {
+							 	return 5;
+							})
+					));
 	public static final DeferredHolder<Block, BuddingResonanceCrystalBlock> BUDDING_RESONANCE_CRYSTAL = register("budding_resonance_crystal",
-			() -> new BuddingResonanceCrystalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.COLOR_BLACK).lightLevel((p_50828_) -> {
-			      return 5;
-			   })
-					.noOcclusion()
-					.randomTicks()
+			() -> new BuddingResonanceCrystalBlock(
+					BlockBehaviour.Properties.ofFullCopy(BlockInit.RESONANCE_CRYSTAL_BLOCK.get())
+							.randomTicks()
+							.pushReaction(PushReaction.DESTROY)
+							.noOcclusion()
+							.lightLevel((p_50828_) -> {
+								return 5;
+							})
 					));
 	public static final DeferredHolder<Block, ResonanceCrystalClusterBlock> RESONANCE_CRYSTAL_CLUSTER = register("resonance_crystal_cluster",
-			() -> new ResonanceCrystalClusterBlock(7, 3, BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_CLUSTER).mapColor(MapColor.COLOR_BLACK).lightLevel((p_50828_) -> {
+			() -> new ResonanceCrystalClusterBlock(7, 3,
+					BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_CLUSTER)
+							.mapColor(MapColor.COLOR_CYAN)
+							.lightLevel((p_50828_) -> {
 			      return 5;
 			   })
 					.noOcclusion()));

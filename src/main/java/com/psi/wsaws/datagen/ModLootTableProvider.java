@@ -41,7 +41,6 @@ public class ModLootTableProvider extends LootTableProvider {
 
 	public ModLootTableProvider(PackOutput pack, CompletableFuture<HolderLookup.Provider> lookupProvider) {
 		super(pack, Set.of(), List.of(new LootTableProvider.SubProviderEntry(ModBlockLoot::new, LootContextParamSets.BLOCK)), lookupProvider);
-		// TODO Auto-generated constructor stub
 	}
 
 }
@@ -69,6 +68,8 @@ class ModBlockLoot extends BlockLootSubProvider {
 		*/
 		
 		this.add(BlockInit.WAYSTONE_BLOCK.get(), noDrop());
+
+		this.add(BlockInit.WAYSHRINE_BLOCK.get(), noDrop());
 		
 		this.dropSelf(BlockInit.RIFT_CORE_BLOCK.get());
 		

@@ -1,12 +1,12 @@
-package com.psi.wsaws.client;
+package com.psi.wsaws.client.render.waystonegeometry;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import org.jetbrains.annotations.Nullable;
+import java.util.*;
 
 import com.psi.wsaws.WSaWS;
+import net.minecraft.client.Minecraft;
+import net.neoforged.neoforge.client.ChunkRenderTypeSet;
+import org.jetbrains.annotations.Nullable;
+
 import com.psi.wsaws.common.block.blockentity.WaystoneBlockEntity;
 import com.psi.wsaws.common.block.blockentity.WaystoneBlockTopEntity;
 
@@ -23,28 +23,28 @@ import net.neoforged.neoforge.client.model.data.ModelData;
 import net.neoforged.neoforge.client.model.data.ModelProperty;
 
 public class WaystoneBlockBakedModel implements IDynamicBakedModel {
-	
+
 	private final TextureAtlasSprite particle;
 	private final boolean ao, gui3d, blockLight;
 	private final ItemOverrides overrides;
 	
-	private static final Map<String, ModelProperty<TextureAtlasSprite>> SPRITE_PROPERTIES = Map.of(
-				"bottom", WaystoneBlockEntity.BOTTOM_SPRITE,
-				"core", WaystoneBlockEntity.CORE_SPRITE,
-				"top", WaystoneBlockTopEntity.TOP_SPRITE
+	private static final Map<String, ModelProperty<BlockState>> SPRITE_PROPERTIES = Map.of(
+				"top", WaystoneBlockTopEntity.TOP_MODEL,
+				"bottom", WaystoneBlockEntity.BOTTOM_MODEL,
+				"core", WaystoneBlockEntity.CORE_MODEL
 			);
 	private final Map<String, BakedModel> parts;
 
-	public WaystoneBlockBakedModel(Map<String, BakedModel> baked, TextureAtlasSprite particle2, 
+	public WaystoneBlockBakedModel(Map<String, BakedModel> baked, TextureAtlasSprite particle,
 			boolean useAmbientOcclusion, boolean gui3d2, boolean useBlockLight, ItemOverrides overrides2) {
 				this.parts = baked;
-				this.particle = particle2;
+				this.particle = particle;
 				this.ao = useAmbientOcclusion;
 				this.gui3d = gui3d2;
 				this.blockLight = useBlockLight;
 				this.overrides = overrides2;
 	}
-	
+
 	@Override public boolean useAmbientOcclusion() { return ao; }
     @Override public boolean isGui3d() { return gui3d; }
     @Override public boolean usesBlockLight() { return blockLight; }
@@ -53,20 +53,49 @@ public class WaystoneBlockBakedModel implements IDynamicBakedModel {
     @Override public boolean isCustomRenderer() { return false; }
 
 	@Override
-	public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, RandomSource rand, ModelData extraData, @Nullable RenderType renderType) {
-		
-		List<BakedQuad> quads = new ArrayList<>();
-		
-		for(var entry : parts.entrySet()) {
-			TextureAtlasSprite sprite = extraData.get(SPRITE_PROPERTIES.get(entry.getKey()));
-			for(BakedQuad q : entry.getValue().getQuads(state, side, rand, extraData, renderType)) {
-				quads.add(sprite != null ? retexture(q, sprite) : q);
-			} //
-		}
-		
-		return quads;
+	public ChunkRenderTypeSet getRenderTypes(BlockState state, RandomSource rand, ModelData data) {
+		return ChunkRenderTypeSet.of(RenderType.cutout());
 	}
-	
+
+	@Override
+	public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, RandomSource rand, ModelData extraData, @Nullable RenderType renderType) {
+		if(state == null){
+			return Collections.emptyList();
+		}else{
+			List<BakedQuad> quads = new ArrayList<>();
+			//WSaWS.LOGGER.debug("getting quads for state: {}", state);
+			for(var entry : parts.entrySet()) {
+				//get model and quads for the part
+				List<BakedQuad> templateQuads = entry.getValue().getQuads(state, side, rand, extraData, renderType);
+
+				BlockState storedState = extraData.get(SPRITE_PROPERTIES.get(entry.getKey()));
+				if(storedState == null || storedState.isAir()){
+					quads.addAll(templateQuads);
+					continue;
+				}
+
+				Map<Direction, TextureAtlasSprite> newSprites = resolveSprites(storedState);
+
+				for (BakedQuad quad : templateQuads) {
+					quads.add(retexture(quad, newSprites.get(quad.getDirection())));
+				}
+			}
+
+			return quads;
+		}
+	}
+
+	@Override
+	public TextureAtlasSprite getParticleIcon(ModelData data) {
+		for (var entry : parts.entrySet()) {
+			BakedModel model = Minecraft.getInstance().getBlockRenderer().getBlockModel(data.get(SPRITE_PROPERTIES.get(entry.getKey())));
+			if(model == null) continue;
+			return model.getParticleIcon(data);
+		}
+
+		return getParticleIcon();
+	}
+
 	private static BakedQuad retexture(BakedQuad source, TextureAtlasSprite newSprite) {
 		//WSaWS.LOGGER.debug("retexture running, setting {} texture to {}", source, newSprite.contents().name());
 		int[] original = source.getVertices();
@@ -91,17 +120,25 @@ public class WaystoneBlockBakedModel implements IDynamicBakedModel {
 		}
 		return new BakedQuad(data, source.getTintIndex(), source.getDirection(), newSprite, source.isShade());
 	}
-	
-	private static BakedQuad translate(BakedQuad source, float dx, float dy, float dz) {
-	    int[] data = source.getVertices().clone();
-	    int intsPerVertex = data.length / 4;
-	    for (int vert = 0; vert < 4; vert++) {
-	        int base = vert * intsPerVertex;
-	        data[base]     = Float.floatToRawIntBits(Float.intBitsToFloat(data[base])     + dx);
-	        data[base + 1] = Float.floatToRawIntBits(Float.intBitsToFloat(data[base + 1]) + dy);
-	        data[base + 2] = Float.floatToRawIntBits(Float.intBitsToFloat(data[base + 2]) + dz);
-	    }
-	    return new BakedQuad(data, source.getTintIndex(), source.getDirection(), source.getSprite(), source.isShade());
-	}
 
+	private static Map<Direction, TextureAtlasSprite> resolveSprites(BlockState state){
+		BakedModel model = Minecraft.getInstance().getBlockRenderer().getBlockModel(state);
+		TextureAtlasSprite fallback = model.getParticleIcon(ModelData.EMPTY);
+		RandomSource rand = RandomSource.create(42L);
+		Map<Direction, TextureAtlasSprite> sprites = new EnumMap<>(Direction.class);
+
+		for (Direction direction : Direction.values()) {
+			TextureAtlasSprite sprite = fallback;
+			try {
+                List<BakedQuad> quads = model.getQuads(state, direction, rand, ModelData.EMPTY, RenderType.cutout());
+				if (!quads.isEmpty()) {
+					sprite = quads.get(0).getSprite();
+				}
+            } catch (RuntimeException e) {
+				WSaWS.LOGGER.warn("Failed to resolve {} face sprite for {}", direction, state, e);
+			}
+			sprites.put(direction, sprite);
+		}
+		return sprites;
+	}
 }

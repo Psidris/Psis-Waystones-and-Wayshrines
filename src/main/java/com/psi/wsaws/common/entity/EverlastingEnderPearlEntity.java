@@ -2,10 +2,14 @@ package com.psi.wsaws.common.entity;
 
 import com.psi.wsaws.common.item.ItemInit;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -16,6 +20,7 @@ import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
@@ -46,7 +51,6 @@ public class EverlastingEnderPearlEntity extends ThrowableItemProjectile {
 
 	@Override
 	public void tick() {
-		// TODO Auto-generated method stub
 		super.tick();
 		Vec3 vec3 = this.getDeltaMovement();
 		double d0 = this.getX() + vec3.x;
@@ -71,28 +75,24 @@ public class EverlastingEnderPearlEntity extends ThrowableItemProjectile {
 		Entity entity = this.getOwner();
 
 		if (!this.level().isClientSide && !this.isRemoved()) {
-			if (entity instanceof ServerPlayer) {
-				ServerPlayer serverplayer = (ServerPlayer) entity;
-				if (serverplayer.connection.isAcceptingMessages() && serverplayer.level() == this.level()
-						&& !serverplayer.isSleeping()) {
+			if (entity instanceof ServerPlayer serverplayer) {
+                if (serverplayer.connection.isAcceptingMessages() && serverplayer.level() == this.level() && !serverplayer.isSleeping()) {
 					net.neoforged.neoforge.event.entity.EntityTeleportEvent.EnderPearl event = net.neoforged.neoforge.event.EventHooks.onEnderPearlLand(serverplayer, this.getX(), this.getY(), this.getZ(), null, 0.0f, hit);
 					if (!event.isCanceled()) {
-						if (this.random.nextFloat() < 0.05F
-								&& this.level().getGameRules().getBoolean(GameRules.RULE_DOMOBSPAWNING)) {
+						if (this.random.nextFloat() < 0.05F && this.level().getGameRules().getBoolean(GameRules.RULE_DOMOBSPAWNING)) {
 							Endermite endermite = EntityType.ENDERMITE.create(this.level());
 							if (endermite != null) {
-								endermite.moveTo(entity.getX(), entity.getY(), entity.getZ(), entity.getYRot(),
-										entity.getXRot());
+								endermite.moveTo(serverplayer.getX(), serverplayer.getY(), serverplayer.getZ(), serverplayer.getYRot(), serverplayer.getXRot());
 								this.level().addFreshEntity(endermite);
 							}
 						}
 
-						if (entity.isPassenger()) {
-							entity.stopRiding();
+						if (serverplayer.isPassenger()) {
+							serverplayer.stopRiding();
 						}
 
-						entity.teleportTo(event.getTargetX(), event.getTargetY(), event.getTargetZ());
-						entity.resetFallDistance();
+						serverplayer.teleportTo(event.getTargetX(), event.getTargetY(), event.getTargetZ());
+						serverplayer.resetFallDistance();
 					} // Forge: End
 				}
 			} else if (entity != null) {
@@ -101,13 +101,11 @@ public class EverlastingEnderPearlEntity extends ThrowableItemProjectile {
 			}
 			// drop item
 			if (!((ServerPlayer) entity).getAbilities().instabuild) {
-				if(this.level().addFreshEntity(new ItemEntity(this.level(), (double) this.getX(), (double) this.getY(), (double) this.getZ(), this.getDefaultItem().getDefaultInstance()))) {
+				if (this.level().addFreshEntity(new ItemEntity(this.level(), (double) this.getX(), (double) this.getY(), (double) this.getZ(), this.getDefaultItem().getDefaultInstance()))) {
 				}
 			}
-			
-			for(int i = 0; i<5; i++) {
-				this.level().levelEvent(2003, this.blockPosition(), 0);
-			}
+
+			level().playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.PLAYER_TELEPORT, SoundSource.BLOCKS, 1f, level().getRandom().nextFloat() * 0.1F + 0.9F);
 
 			this.discard();
 
