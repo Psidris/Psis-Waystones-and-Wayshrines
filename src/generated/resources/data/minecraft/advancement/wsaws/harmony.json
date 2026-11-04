@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:wsaws/how_curious_amethyst",
+  "criteria": {
+    "acquire_resonance_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wsaws:resonance_crystal_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wsaws.harmony.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "wsaws:resonance_crystal_shard"
+    },
+    "title": {
+      "translate": "advancements.wsaws.harmony.title"
+    }
+  },
+  "requirements": [
+    [
+      "acquire_resonance_shard"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

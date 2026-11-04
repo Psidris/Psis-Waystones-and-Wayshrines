@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:wsaws/how_curious_echo_shard",
+  "criteria": {
+    "dissonance": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:amethyst_shard"
+          },
+          {
+            "items": "minecraft:echo_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.wsaws.dissonance.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:sculk_catalyst"
+    },
+    "title": {
+      "translate": "advancements.wsaws.dissonance.title"
+    }
+  },
+  "requirements": [
+    [
+      "dissonance"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

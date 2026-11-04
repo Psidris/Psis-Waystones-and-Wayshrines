@@ -1,54 +1,314 @@
 {
   "variants": {
-    "facing=down,waterlogged=false": {
-      "model": "wsaws:block/large_resonance_crystal_bud",
+    "facing=down,phase=0,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0",
       "x": 180
     },
-    "facing=down,waterlogged=true": {
-      "model": "wsaws:block/large_resonance_crystal_bud",
+    "facing=down,phase=0,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0",
       "x": 180
     },
-    "facing=east,waterlogged=false": {
-      "model": "wsaws:block/large_resonance_crystal_bud",
+    "facing=down,phase=1,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1",
+      "x": 180
+    },
+    "facing=down,phase=1,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1",
+      "x": 180
+    },
+    "facing=down,phase=2,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2",
+      "x": 180
+    },
+    "facing=down,phase=2,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2",
+      "x": 180
+    },
+    "facing=down,phase=3,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3",
+      "x": 180
+    },
+    "facing=down,phase=3,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3",
+      "x": 180
+    },
+    "facing=down,phase=4,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4",
+      "x": 180
+    },
+    "facing=down,phase=4,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4",
+      "x": 180
+    },
+    "facing=down,phase=5,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5",
+      "x": 180
+    },
+    "facing=down,phase=5,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5",
+      "x": 180
+    },
+    "facing=east,phase=0,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0",
       "x": 90,
       "y": 90
     },
-    "facing=east,waterlogged=true": {
-      "model": "wsaws:block/large_resonance_crystal_bud",
+    "facing=east,phase=0,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0",
       "x": 90,
       "y": 90
     },
-    "facing=north,waterlogged=false": {
-      "model": "wsaws:block/large_resonance_crystal_bud",
+    "facing=east,phase=1,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,phase=1,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,phase=2,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,phase=2,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,phase=3,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,phase=3,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,phase=4,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,phase=4,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,phase=5,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,phase=5,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north,phase=0,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0",
       "x": 90
     },
-    "facing=north,waterlogged=true": {
-      "model": "wsaws:block/large_resonance_crystal_bud",
+    "facing=north,phase=0,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0",
       "x": 90
     },
-    "facing=south,waterlogged=false": {
-      "model": "wsaws:block/large_resonance_crystal_bud",
+    "facing=north,phase=1,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1",
+      "x": 90
+    },
+    "facing=north,phase=1,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1",
+      "x": 90
+    },
+    "facing=north,phase=2,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2",
+      "x": 90
+    },
+    "facing=north,phase=2,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2",
+      "x": 90
+    },
+    "facing=north,phase=3,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3",
+      "x": 90
+    },
+    "facing=north,phase=3,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3",
+      "x": 90
+    },
+    "facing=north,phase=4,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4",
+      "x": 90
+    },
+    "facing=north,phase=4,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4",
+      "x": 90
+    },
+    "facing=north,phase=5,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5",
+      "x": 90
+    },
+    "facing=north,phase=5,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5",
+      "x": 90
+    },
+    "facing=south,phase=0,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0",
       "x": 90,
       "y": 180
     },
-    "facing=south,waterlogged=true": {
-      "model": "wsaws:block/large_resonance_crystal_bud",
+    "facing=south,phase=0,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0",
       "x": 90,
       "y": 180
     },
-    "facing=up,waterlogged=false": {
-      "model": "wsaws:block/large_resonance_crystal_bud"
+    "facing=south,phase=1,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1",
+      "x": 90,
+      "y": 180
     },
-    "facing=up,waterlogged=true": {
-      "model": "wsaws:block/large_resonance_crystal_bud"
+    "facing=south,phase=1,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1",
+      "x": 90,
+      "y": 180
     },
-    "facing=west,waterlogged=false": {
-      "model": "wsaws:block/large_resonance_crystal_bud",
+    "facing=south,phase=2,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,phase=2,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,phase=3,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,phase=3,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,phase=4,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,phase=4,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,phase=5,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,phase=5,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up,phase=0,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0"
+    },
+    "facing=up,phase=0,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0"
+    },
+    "facing=up,phase=1,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1"
+    },
+    "facing=up,phase=1,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1"
+    },
+    "facing=up,phase=2,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2"
+    },
+    "facing=up,phase=2,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2"
+    },
+    "facing=up,phase=3,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3"
+    },
+    "facing=up,phase=3,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3"
+    },
+    "facing=up,phase=4,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4"
+    },
+    "facing=up,phase=4,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4"
+    },
+    "facing=up,phase=5,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5"
+    },
+    "facing=up,phase=5,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5"
+    },
+    "facing=west,phase=0,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0",
       "x": 90,
       "y": 270
     },
-    "facing=west,waterlogged=true": {
-      "model": "wsaws:block/large_resonance_crystal_bud",
+    "facing=west,phase=0,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/0",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,phase=1,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,phase=1,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/1",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,phase=2,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,phase=2,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/2",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,phase=3,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,phase=3,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/3",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,phase=4,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,phase=4,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/4",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,phase=5,waterlogged=false": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,phase=5,waterlogged=true": {
+      "model": "wsaws:block/large_resonance_crystal_bud/5",
       "x": 90,
       "y": 270
     }

@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:wsaws/harmony",
+  "criteria": {
+    "found_crying_obi": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:crying_obsidian"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "traveled_dimensions": {
+      "conditions": {
+        "to": "minecraft:the_nether"
+      },
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.wsaws.how_curious_crying_obi.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:crying_obsidian"
+    },
+    "title": {
+      "translate": "advancements.wsaws.how_curious_crying_obi.title"
+    }
+  },
+  "requirements": [
+    [
+      "traveled_dimensions"
+    ],
+    [
+      "found_crying_obi"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

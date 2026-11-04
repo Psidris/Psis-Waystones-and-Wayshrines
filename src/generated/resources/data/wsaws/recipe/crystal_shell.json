@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+    "R": {
+      "item": "wsaws:resonance_crystal_cluster"
+    }
+  },
+  "pattern": [
+    "RER",
+    "E E",
+    "RER"
+  ],
+  "result": {
+    "count": 1,
+    "id": "wsaws:crystal_shell"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:wsaws/how_curious_ender_pearl",
+  "criteria": {
+    "craft_crystal_shell": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wsaws:crystal_shell"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.wsaws.craft_crystal_shell.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "wsaws:crystal_shell"
+    },
+    "title": {
+      "translate": "advancements.wsaws.craft_crystal_shell.title"
+    }
+  },
+  "requirements": [
+    [
+      "craft_crystal_shell"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

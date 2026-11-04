@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:lead"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "R": {
+      "item": "wsaws:resonance_crystal_shard"
+    }
+  },
+  "pattern": [
+    "R R",
+    "RLR",
+    "LBL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "wsaws:rift_claw"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:wsaws/root",
+  "criteria": {
+    "found_amethyst": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:amethyst_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.wsaws.how_curious_amethyst.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:amethyst_shard"
+    },
+    "title": {
+      "translate": "advancements.wsaws.how_curious_amethyst.title"
+    }
+  },
+  "requirements": [
+    [
+      "found_amethyst"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

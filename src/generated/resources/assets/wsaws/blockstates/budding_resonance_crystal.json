@@ -1,7 +1,22 @@
 {
   "variants": {
-    "": {
-      "model": "wsaws:block/budding_resonance_crystal"
+    "phase=0": {
+      "model": "wsaws:block/budding_resonance_crystal/0"
+    },
+    "phase=1": {
+      "model": "wsaws:block/budding_resonance_crystal/1"
+    },
+    "phase=2": {
+      "model": "wsaws:block/budding_resonance_crystal/2"
+    },
+    "phase=3": {
+      "model": "wsaws:block/budding_resonance_crystal/3"
+    },
+    "phase=4": {
+      "model": "wsaws:block/budding_resonance_crystal/4"
+    },
+    "phase=5": {
+      "model": "wsaws:block/budding_resonance_crystal/5"
     }
   }
 }

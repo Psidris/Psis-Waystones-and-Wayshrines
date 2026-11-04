@@ -1,0 +1,4 @@
+{
+    "loader": "wsaws:waystone_model_loader",
+    "top": "wsaws:block/waystone/waystone_block_top"
+}

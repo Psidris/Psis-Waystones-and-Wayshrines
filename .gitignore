@@ -1,27 +1,29 @@
-# eclipse
-bin
-*.launch
-.settings
-.metadata
-.classpath
-.project
+# Gradle
+.gradle/
+build/
+**/build/
+**/..gradle/
 
-# idea
-out
+# IntelliJ IDEA
+.idea/
+*.iml
 *.ipr
 *.iws
-*.iml
-.idea
 
-# gradle
-build
-.gradle
+# Eclipse (if shared/multi-IDE)
+.classpath
+.project
+.settings/
+bin/
 
-# other
-eclipse
-run
-run-data
-*.cache
+# NeoForge / Minecraft Runtime & Logs
+run/
+**/runs/
+logs/
+-X*
+hs_err_pid*
 
-# Files from Forge MDK
-forge*changelog.txt
+# Misc / OS files
+.DS_Store
+Thumbs.db
+celery.bat

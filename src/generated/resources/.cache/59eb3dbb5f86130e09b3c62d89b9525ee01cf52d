@@ -1,0 +1,10 @@
+// 1.21.1	2026-10-07T21:30:04.0237352	Loot Tables
+653b650920d1b0efe661dc65a6f2239e8a658ed7 data/wsaws/loot_table/blocks/budding_resonance_crystal.json
+74e74be452e34fe8bd54d73beb1dfbe5f2aa9896 data/wsaws/loot_table/blocks/large_resonance_crystal_bud.json
+108b051d1d91d8b98e7a24873fd99670c6af790e data/wsaws/loot_table/blocks/medium_resonance_crystal_bud.json
+82fb35309b538fd0916f651143d6934905d5b5e9 data/wsaws/loot_table/blocks/resonance_crystal_block.json
+19362a40c88c5890c365aa5c9ff1433becb9998f data/wsaws/loot_table/blocks/resonance_crystal_cluster.json
+bf25563d532ed1d5d9d183e3ee0d26ce826c8946 data/wsaws/loot_table/blocks/rift_core_block.json
+be07d5af096a068100d60f6d2fc5ab5600e1bea5 data/wsaws/loot_table/blocks/small_resonance_crystal_bud.json
+68f64377efb88ea700a18f07d9069bd3be2df47d data/wsaws/loot_table/blocks/wayshrine_block.json
+5fab599e895cae2c0078c2f81e39111644a234f6 data/wsaws/loot_table/blocks/waystone_block.json

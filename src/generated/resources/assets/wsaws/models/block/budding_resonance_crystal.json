@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "wsaws:block/budding_resonance_crystal"
-  }
-}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:wsaws/chorus_eaten",
+  "criteria": {
+    "craft_rift_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wsaws:rift_core_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wsaws.craft_rift_core.desc"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "wsaws:rift_core_block"
+    },
+    "title": {
+      "translate": "advancements.wsaws.craft_rift_core.title"
+    }
+  },
+  "requirements": [
+    [
+      "craft_rift_core"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
